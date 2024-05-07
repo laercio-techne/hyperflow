@@ -1,0 +1,283 @@
+{
+    "name": "Three branch journey (Sample)",
+    "nodes": [
+        {
+            "id": "f51c7f51-b5c6-4111-b72a-bc91a223619d",
+            "data": {
+                "stepId": "8ef46fd3-5d3c-4698-8b16-a4eab373ae83",
+                "disabled": false
+            },
+            "type": "start",
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "selected": false
+        },
+        {
+            "id": "97f37a62-0a53-4b97-8e3c-ef413fc4fa24",
+            "data": {
+                "type": "waitUntil",
+                "stepId": "441f5953-3205-4ea9-a096-e03a0474a4c0",
+                "branches": [
+                    {
+                        "id": "969aa15c-cb15-447b-805e-9e3398b130ae",
+                        "type": "event",
+                        "conditions": [
+                            {
+                                "name": "reactivation",
+                                "statements": [],
+                                "providerType": "custom",
+                                "relationToNext": "or"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "6406f073-41bb-4de8-a32c-6606e5601dcc",
+                        "type": "event",
+                        "conditions": [
+                            {
+                                "name": "newsletter",
+                                "statements": [],
+                                "providerType": "custom",
+                                "relationToNext": "or"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "2bc7f31b-23ba-423f-8419-c118d281e670",
+                        "type": "event",
+                        "conditions": [
+                            {
+                                "name": "invoice",
+                                "statements": [],
+                                "providerType": "custom",
+                                "relationToNext": "or"
+                            }
+                        ]
+                    }
+                ],
+                "disabled": false,
+                "showErrors": true
+            },
+            "type": "waitUntil",
+            "position": {
+                "x": 0,
+                "y": 114
+            },
+            "selected": false
+        },
+        {
+            "id": "88e3aeb3-a8a1-4245-acfd-69cb17cae8ad",
+            "data": {
+                "type": "message",
+                "stepId": "b0d1b240-6519-42ce-ae78-975b498995ea",
+                "disabled": false,
+                "template": {
+                    "type": "email",
+                    "selected": {
+                        "id": 9240,
+                        "name": "example-template-reactivation"
+                    }
+                },
+                "showErrors": true
+            },
+            "type": "message",
+            "position": {
+                "x": -520,
+                "y": 326
+            },
+            "selected": false
+        },
+        {
+            "id": "a9661283-1f16-4f2e-b61c-0fdf028cb6bd",
+            "data": {
+                "type": "jumpTo",
+                "stepId": "ce62047c-23fb-4c02-9d9c-559080d7fe48",
+                "disabled": false,
+                "targetId": "97f37a62-0a53-4b97-8e3c-ef413fc4fa24"
+            },
+            "type": "jumpTo",
+            "position": {
+                "x": -520,
+                "y": 440
+            },
+            "selected": false
+        },
+        {
+            "id": "059ee8e9-f27a-45b6-8660-8ba102eefaa0",
+            "data": {
+                "type": "message",
+                "stepId": "e6357607-5bd3-442a-b02e-b3c7d8508f55",
+                "disabled": false,
+                "template": {
+                    "type": "email",
+                    "selected": {
+                        "id": 9243,
+                        "name": "example-template-newsletter"
+                    }
+                },
+                "showErrors": true
+            },
+            "type": "message",
+            "position": {
+                "x": 0,
+                "y": 326
+            },
+            "selected": false
+        },
+        {
+            "id": "aca80750-a8c1-4ed5-945e-f428145a31bc",
+            "data": {
+                "type": "jumpTo",
+                "stepId": "075f8fa3-23d5-417d-9324-72d19c98a76a",
+                "disabled": false,
+                "targetId": "97f37a62-0a53-4b97-8e3c-ef413fc4fa24"
+            },
+            "type": "jumpTo",
+            "position": {
+                "x": 0,
+                "y": 440
+            },
+            "selected": false
+        },
+        {
+            "id": "7c27462f-7d05-4d1c-b586-f373ba348bb3",
+            "data": {
+                "type": "message",
+                "stepId": "88a195c0-2da9-4f52-b905-fe46ec94375d",
+                "disabled": false,
+                "template": {
+                    "type": "email",
+                    "selected": {
+                        "id": 9242,
+                        "name": "example-template-invoice"
+                    }
+                },
+                "showErrors": true
+            },
+            "type": "message",
+            "position": {
+                "x": 520,
+                "y": 326
+            },
+            "selected": false
+        },
+        {
+            "id": "313bd3a7-b9d6-412a-9897-3d54eb4097ae",
+            "data": {
+                "type": "jumpTo",
+                "stepId": "ce427a79-612e-49a6-b622-227f3d8f0589",
+                "disabled": false,
+                "targetId": "97f37a62-0a53-4b97-8e3c-ef413fc4fa24"
+            },
+            "type": "jumpTo",
+            "position": {
+                "x": 520,
+                "y": 440
+            },
+            "selected": false
+        }
+    ],
+    "edges": [
+        {
+            "id": "ef51c7f51-b5c6-4111-b72a-bc91a223619d-97f37a62-0a53-4b97-8e3c-ef413fc4fa24",
+            "type": "primary",
+            "source": "f51c7f51-b5c6-4111-b72a-bc91a223619d",
+            "target": "97f37a62-0a53-4b97-8e3c-ef413fc4fa24"
+        },
+        {
+            "id": "b969aa15c-cb15-447b-805e-9e3398b130ae",
+            "data": {
+                "type": "branch",
+                "branch": {
+                    "id": "969aa15c-cb15-447b-805e-9e3398b130ae",
+                    "type": "event",
+                    "conditions": [
+                        {
+                            "name": "reactivation",
+                            "statements": [],
+                            "providerType": "custom",
+                            "relationToNext": "or"
+                        }
+                    ]
+                }
+            },
+            "type": "branch",
+            "source": "97f37a62-0a53-4b97-8e3c-ef413fc4fa24",
+            "target": "88e3aeb3-a8a1-4245-acfd-69cb17cae8ad"
+        },
+        {
+            "id": "b6406f073-41bb-4de8-a32c-6606e5601dcc",
+            "data": {
+                "type": "branch",
+                "branch": {
+                    "id": "6406f073-41bb-4de8-a32c-6606e5601dcc",
+                    "type": "event",
+                    "conditions": [
+                        {
+                            "name": "newsletter",
+                            "statements": [],
+                            "providerType": "custom",
+                            "relationToNext": "or"
+                        }
+                    ]
+                }
+            },
+            "type": "branch",
+            "source": "97f37a62-0a53-4b97-8e3c-ef413fc4fa24",
+            "target": "059ee8e9-f27a-45b6-8660-8ba102eefaa0"
+        },
+        {
+            "id": "b2bc7f31b-23ba-423f-8419-c118d281e670",
+            "data": {
+                "type": "branch",
+                "branch": {
+                    "id": "2bc7f31b-23ba-423f-8419-c118d281e670",
+                    "type": "event",
+                    "conditions": [
+                        {
+                            "name": "invoice",
+                            "statements": [],
+                            "providerType": "custom",
+                            "relationToNext": "or"
+                        }
+                    ]
+                }
+            },
+            "type": "branch",
+            "source": "97f37a62-0a53-4b97-8e3c-ef413fc4fa24",
+            "target": "7c27462f-7d05-4d1c-b586-f373ba348bb3"
+        },
+        {
+            "id": "88e3aeb3-a8a1-4245-acfd-69cb17cae8ad-a9661283-1f16-4f2e-b61c-0fdf028cb6bd",
+            "type": "primary",
+            "source": "88e3aeb3-a8a1-4245-acfd-69cb17cae8ad",
+            "target": "a9661283-1f16-4f2e-b61c-0fdf028cb6bd"
+        },
+        {
+            "id": "059ee8e9-f27a-45b6-8660-8ba102eefaa0-aca80750-a8c1-4ed5-945e-f428145a31bc",
+            "type": "primary",
+            "source": "059ee8e9-f27a-45b6-8660-8ba102eefaa0",
+            "target": "aca80750-a8c1-4ed5-945e-f428145a31bc"
+        },
+        {
+            "id": "7c27462f-7d05-4d1c-b586-f373ba348bb3-313bd3a7-b9d6-412a-9897-3d54eb4097ae",
+            "type": "primary",
+            "source": "7c27462f-7d05-4d1c-b586-f373ba348bb3",
+            "target": "313bd3a7-b9d6-412a-9897-3d54eb4097ae"
+        }
+    ],
+    "segments": {
+        "type": "allCustomers"
+    },
+    "isDynamic": true,
+    "isActive": false,
+    "isPaused": false,
+    "isStopped": false,
+    "isDeleted": false,
+    "journeyEntrySettings": null,
+    "journeySettings": null,
+    "latestSave": "2024-04-30T02:38:46.161Z",
+    "latestChangerEmail": "laerciopesa30@hotmail.com"
+}

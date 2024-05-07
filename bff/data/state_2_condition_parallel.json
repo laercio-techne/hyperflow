@@ -1,0 +1,91 @@
+{
+  "StartAt": "Start",
+  "States": {
+    "Start": {
+      "Type": "Pass",
+      "Label": "Iniciar Workflow",
+      "Next": "DefaultChoice"
+    },
+    "DefaultChoice": {
+      "Type": "Choice",
+      "Label": "Decisao Principal",
+      "Choices": [
+        {
+          "Variable": "$['input']",
+          "StringEquals": "true",
+          "Next": "ChoiceTrue"
+        },
+        {
+          "Variable": "$['input']",
+          "StringEquals": "false",
+          "Next": "ChoiceFalse"
+        }
+      ],
+      "Default": "End"
+    },
+    "ChoiceTrue": {
+      "Type": "Choice",
+      "Label": "Decisao Verdadeira",
+      "Choices": [
+        {
+          "Variable": "$['input']",
+          "StringEquals": "true",
+          "Next": "NextState3"
+        },
+        {
+          "Variable": "$['input']",
+          "StringEquals": "false",
+          "Next": "NextState4"
+        }
+      ],
+      "Default": "End"
+    },
+    "ChoiceFalse": {
+      "Type": "Choice",
+      "Label": "Decisao Falsa",
+      "Choices": [
+        {
+          "Variable": "$['input']",
+          "StringEquals": "true",
+          "Next": "NextState5"
+        },
+        {
+          "Variable": "$['input']",
+          "StringEquals": "false",
+          "Next": "End"
+        }
+      ],
+      "Default": "End"
+    },
+    "NextState3": {
+      "Type": "Pass",
+      "Result": "Next State 3",
+      "Label": "Resultado Verdadeiro",
+      "Next": "End"
+    },
+    "NextState4": {
+      "Type": "Pass",
+      "Result": "Next State 4",
+      "Label": "Resultado Falso",
+      "Next": "End"
+    },
+    "NextState5": {
+      "Type": "Pass",
+      "Result": "Next State 4",
+      "Label": "Primeiro Verdadeiro",
+      "Next": "NextState6"
+    },
+    "NextState6": {
+      "Type": "Pass",
+      "Result": "Next State 4",
+      "Label": "Segundo Verdadeiro",
+      "Next": "End"
+    },
+    "End": {
+      "Type": "Pass",
+      "Label": "Fim",
+      "Result": "End of workflow",
+      "End": true
+    }
+  }
+}

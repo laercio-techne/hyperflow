@@ -1,0 +1,184 @@
+{
+    "name": "Basic Onboarding (Sample)",
+    "nodes": [
+        {
+            "id": "cc2333db-88d3-41d8-a22d-206ea092d8ab",
+            "data": {
+                "stepId": "2b06b33c-a152-4dda-9ad6-a8887d814c23"
+            },
+            "type": "start",
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "selected": false
+        },
+        {
+            "id": "ee979f0a-653f-4e58-a425-726cb8c3cf6a",
+            "data": {
+                "type": "waitUntil",
+                "stepId": "e81c5107-726b-4291-9cef-f850becbe6a6",
+                "branches": [
+                    {
+                        "id": "27200da1-bdd3-4c46-8216-7a09184f7bc0",
+                        "type": "event",
+                        "conditions": [
+                            {
+                                "name": "verify",
+                                "statements": [],
+                                "providerType": "custom",
+                                "relationToNext": "and"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "986ba05b-2a75-4bd2-a597-f11ef29e7b00",
+                        "type": "maxTime",
+                        "delay": {
+                            "days": 2,
+                            "hours": 0,
+                            "minutes": 0
+                        },
+                        "timeType": "timeDelay"
+                    }
+                ]
+            },
+            "type": "waitUntil",
+            "position": {
+                "x": 0,
+                "y": 114
+            },
+            "selected": false
+        },
+        {
+            "id": "db24008a-c31e-4d9c-a3c0-ef255b5cdda5",
+            "data": {
+                "type": "message",
+                "stepId": "70a1f359-e89e-48a4-9d34-6f5dad75050e",
+                "template": {
+                    "type": "email"
+                },
+                "customName": "Email 1"
+            },
+            "type": "message",
+            "position": {
+                "x": -260,
+                "y": 326
+            },
+            "selected": false
+        },
+        {
+            "id": "a17820a5-3182-4cc5-8c4f-eda77d197ef8",
+            "data": {
+                "stepId": "44fab08a-aed0-4e24-be53-d542c803e1e4"
+            },
+            "type": "exit",
+            "position": {
+                "x": -260,
+                "y": 440
+            },
+            "selected": false
+        },
+        {
+            "id": "55cb7651-09ab-4280-8b46-9d0dc22baaef",
+            "data": {
+                "type": "message",
+                "stepId": "4682e409-8de8-4603-bef1-216d05406722",
+                "template": {
+                    "type": "email"
+                },
+                "customName": "Email 2"
+            },
+            "type": "message",
+            "position": {
+                "x": 260,
+                "y": 326
+            },
+            "selected": false
+        },
+        {
+            "id": "3f6f7fc1-f0ca-41be-abba-1458fbd5ead4",
+            "data": {
+                "stepId": "7c7f75e0-ac96-4f00-bc49-d2dc046b00a2"
+            },
+            "type": "exit",
+            "position": {
+                "x": 260,
+                "y": 440
+            },
+            "selected": false
+        }
+    ],
+    "edges": [
+        {
+            "id": "b27200da1-bdd3-4c46-8216-7a09184f7bc0",
+            "data": {
+                "type": "branch",
+                "branch": {
+                    "id": "27200da1-bdd3-4c46-8216-7a09184f7bc0",
+                    "type": "event",
+                    "conditions": [
+                        {
+                            "name": "verify",
+                            "statements": [],
+                            "providerType": "custom",
+                            "relationToNext": "and"
+                        }
+                    ]
+                }
+            },
+            "type": "branch",
+            "source": "ee979f0a-653f-4e58-a425-726cb8c3cf6a",
+            "target": "db24008a-c31e-4d9c-a3c0-ef255b5cdda5"
+        },
+        {
+            "id": "b986ba05b-2a75-4bd2-a597-f11ef29e7b00",
+            "data": {
+                "type": "branch",
+                "branch": {
+                    "id": "986ba05b-2a75-4bd2-a597-f11ef29e7b00",
+                    "type": "maxTime",
+                    "delay": {
+                        "days": 2,
+                        "hours": 0,
+                        "minutes": 0
+                    },
+                    "timeType": "timeDelay"
+                }
+            },
+            "type": "branch",
+            "source": "ee979f0a-653f-4e58-a425-726cb8c3cf6a",
+            "target": "55cb7651-09ab-4280-8b46-9d0dc22baaef"
+        },
+        {
+            "id": "db24008a-c31e-4d9c-a3c0-ef255b5cdda5-a17820a5-3182-4cc5-8c4f-eda77d197ef8",
+            "type": "primary",
+            "source": "db24008a-c31e-4d9c-a3c0-ef255b5cdda5",
+            "target": "a17820a5-3182-4cc5-8c4f-eda77d197ef8"
+        },
+        {
+            "id": "ecc2333db-88d3-41d8-a22d-206ea092d8ab-ee979f0a-653f-4e58-a425-726cb8c3cf6a",
+            "type": "primary",
+            "source": "cc2333db-88d3-41d8-a22d-206ea092d8ab",
+            "target": "ee979f0a-653f-4e58-a425-726cb8c3cf6a"
+        },
+        {
+            "id": "55cb7651-09ab-4280-8b46-9d0dc22baaef-3f6f7fc1-f0ca-41be-abba-1458fbd5ead4",
+            "type": "primary",
+            "source": "55cb7651-09ab-4280-8b46-9d0dc22baaef",
+            "target": "3f6f7fc1-f0ca-41be-abba-1458fbd5ead4"
+        }
+    ],
+    "segments": {
+        "type": "allCustomers"
+    },
+    "isDynamic": true,
+    "isActive": false,
+    "isPaused": false,
+    "isStopped": false,
+    "isDeleted": false,
+    "journeyEntrySettings": null,
+    "journeySettings": null,
+    "latestSave": "2024-05-02T02:44:18.418Z",
+    "latestChangerEmail": "laerciopesa30@hotmail.com"
+}

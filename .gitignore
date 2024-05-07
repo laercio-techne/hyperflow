@@ -128,3 +128,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+backup
+bff/node_modules
+client/node_modules

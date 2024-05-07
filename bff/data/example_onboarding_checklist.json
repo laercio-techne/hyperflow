@@ -1,0 +1,241 @@
+{
+    "name": "Example onboarding checklist",
+    "nodes": [
+        {
+            "id": "776ee148-00df-4fb8-9781-6e921050d491",
+            "data": {
+                "stepId": "3e436325-0bba-49b7-b2db-7405298f29c8"
+            },
+            "type": "start",
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "selected": false
+        },
+        {
+            "id": "3f451c93-0545-4ca0-aac8-069f84b4998e",
+            "data": {
+                "type": "tracker",
+                "stepId": "7a81d583-02ca-4da1-8855-d132b57b6337",
+                "tracker": {
+                    "fields": [
+                        {
+                            "name": "MainTitle",
+                            "type": "String",
+                            "value": "Welcome to Example"
+                        },
+                        {
+                            "name": "step-1-title",
+                            "type": "String",
+                            "value": "Create a example"
+                        },
+                        {
+                            "name": "step-1-desc",
+                            "type": "String",
+                            "value": "An introduction to \"projects\" and instructions on how to create them."
+                        },
+                        {
+                            "name": "step-1-button-text",
+                            "type": "String",
+                            "value": "Create a example"
+                        },
+                        {
+                            "name": "step-1-done",
+                            "type": "Boolean",
+                            "value": "false"
+                        },
+                        {
+                            "name": "step-2-title",
+                            "type": "String",
+                            "value": "Import contacts"
+                        },
+                        {
+                            "name": "step-2-desc",
+                            "type": "String",
+                            "value": "An introduction to \"contacts\" An introduction to \"contacts\" An introduction to \"contacts\" An introduction to \"contacts\"An introduction to \"contacts"
+                        },
+                        {
+                            "name": "step-2-button-text",
+                            "type": "String",
+                            "value": "Import contacts"
+                        },
+                        {
+                            "name": "step-2-done",
+                            "type": "Boolean",
+                            "value": "false"
+                        },
+                        {
+                            "name": "step-3-title",
+                            "type": "String",
+                            "value": "Create a sequence"
+                        },
+                        {
+                            "name": "step-3-desc",
+                            "type": "String",
+                            "value": "An introduction to \"sequence\", the value. An introduction to \"sequence\", the value. An introduction to \"sequence\", the value."
+                        },
+                        {
+                            "name": "step-3-button-text",
+                            "type": "String",
+                            "value": "Create a sequence"
+                        },
+                        {
+                            "name": "step-3-done",
+                            "type": "Boolean",
+                            "value": "false"
+                        }
+                    ],
+                    "trackerId": "various-duck-3332",
+                    "visibility": "show",
+                    "trackerTemplate": {
+                        "id": 9246,
+                        "name": "side-checklist-example"
+                    }
+                },
+                "needsCheck": false,
+                "showErrors": true
+            },
+            "type": "tracker",
+            "position": {
+                "x": 0,
+                "y": 114
+            },
+            "selected": false
+        },
+        {
+            "id": "2fc93fae-b4e2-45a2-8fcd-7e0abdbfcf56",
+            "data": {
+                "type": "multisplit",
+                "stepId": "f71d06a4-3aa3-4f76-b287-136e6af84bc7",
+                "branches": [
+                    {
+                        "id": "fd2c3a55-0ef3-4f80-b21e-a067c2cdc7e6",
+                        "type": "multisplit",
+                        "conditions": {
+                            "type": "conditional",
+                            "query": {
+                                "type": "any",
+                                "statements": [
+                                    {
+                                        "key": "teste",
+                                        "type": "Attribute",
+                                        "value": "10",
+                                        "valueType": "String",
+                                        "comparisonType": "is equal to",
+                                        "subComparisonType": "exist",
+                                        "dateComparisonType": "absolute",
+                                        "subComparisonValue": ""
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "2668dd9d-7469-4afa-aab0-11f133093ff7",
+                        "type": "multisplit",
+                        "isOthers": true
+                    }
+                ],
+                "showErrors": true
+            },
+            "type": "multisplit",
+            "position": {
+                "x": 0,
+                "y": 238
+            },
+            "selected": false
+        },
+        {
+            "id": "a8409a4c-108f-4fcc-b262-67c7382567db",
+            "data": {},
+            "type": "empty",
+            "position": {
+                "x": -260,
+                "y": 450
+            },
+            "selected": false
+        },
+        {
+            "id": "a657bfe6-6502-44a5-8fee-bb7fcfec6ee9",
+            "data": {},
+            "type": "empty",
+            "position": {
+                "x": 260,
+                "y": 450
+            },
+            "selected": false
+        }
+    ],
+    "edges": [
+        {
+            "id": "e776ee148-00df-4fb8-9781-6e921050d491-3f451c93-0545-4ca0-aac8-069f84b4998e",
+            "type": "primary",
+            "source": "776ee148-00df-4fb8-9781-6e921050d491",
+            "target": "3f451c93-0545-4ca0-aac8-069f84b4998e"
+        },
+        {
+            "id": "e3f451c93-0545-4ca0-aac8-069f84b4998e-2fc93fae-b4e2-45a2-8fcd-7e0abdbfcf56",
+            "type": "primary",
+            "source": "3f451c93-0545-4ca0-aac8-069f84b4998e",
+            "target": "2fc93fae-b4e2-45a2-8fcd-7e0abdbfcf56"
+        },
+        {
+            "id": "bfd2c3a55-0ef3-4f80-b21e-a067c2cdc7e6",
+            "data": {
+                "type": "branch",
+                "branch": {
+                    "id": "fd2c3a55-0ef3-4f80-b21e-a067c2cdc7e6",
+                    "type": "multisplit",
+                    "conditions": {
+                        "type": "conditional",
+                        "query": {
+                            "type": "any",
+                            "statements": [
+                                {
+                                    "key": "teste",
+                                    "type": "Attribute",
+                                    "value": "10",
+                                    "valueType": "String",
+                                    "comparisonType": "is equal to",
+                                    "subComparisonType": "exist",
+                                    "dateComparisonType": "absolute",
+                                    "subComparisonValue": ""
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "type": "branch",
+            "source": "2fc93fae-b4e2-45a2-8fcd-7e0abdbfcf56",
+            "target": "a8409a4c-108f-4fcc-b262-67c7382567db"
+        },
+        {
+            "id": "b2668dd9d-7469-4afa-aab0-11f133093ff7",
+            "data": {
+                "type": "branch",
+                "branch": {
+                    "id": "2668dd9d-7469-4afa-aab0-11f133093ff7",
+                    "type": "multisplit",
+                    "isOthers": true
+                }
+            },
+            "type": "branch",
+            "source": "2fc93fae-b4e2-45a2-8fcd-7e0abdbfcf56",
+            "target": "a657bfe6-6502-44a5-8fee-bb7fcfec6ee9"
+        }
+    ],
+    "segments": {
+        "type": "allCustomers"
+    },
+    "isDynamic": true,
+    "isActive": false,
+    "isPaused": false,
+    "isStopped": false,
+    "isDeleted": false,
+    "journeyEntrySettings": null,
+    "journeySettings": null,
+    "latestSave": "2024-05-02T02:37:04.098Z",
+    "latestChangerEmail": "laerciopesa30@hotmail.com"
+}

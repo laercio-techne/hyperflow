@@ -1,0 +1,71 @@
+{
+    "name": "General Email Campaign (Sample)",
+    "nodes": [
+        {
+            "id": "64bb8b23-ed24-453a-a5f7-3d03f88f813b",
+            "data": {
+                "stepId": "bd75b7bc-8fc5-49b2-9cfb-0e7fa136c3b7"
+            },
+            "type": "start",
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "selected": false
+        },
+        {
+            "id": "d9526784-78dd-41a8-b679-aa55dacaedfe",
+            "data": {
+                "type": "message",
+                "stepId": "74b8b603-f376-4a3e-bfa9-b0849c75aa66",
+                "template": {
+                    "type": "email"
+                }
+            },
+            "type": "message",
+            "position": {
+                "x": 0,
+                "y": 125
+            },
+            "selected": false
+        },
+        {
+            "id": "9d76b90f-a791-444c-8295-e6839432e586",
+            "data": {
+                "stepId": "d828f237-c437-44a5-902c-c3f5235400c3"
+            },
+            "type": "exit",
+            "position": {
+                "x": 0,
+                "y": 250
+            },
+            "selected": false
+        }
+    ],
+    "edges": [
+        {
+            "id": "e64bb8b23-ed24-453a-a5f7-3d03f88f813b-d9526784-78dd-41a8-b679-aa55dacaedfe",
+            "type": "primary",
+            "source": "64bb8b23-ed24-453a-a5f7-3d03f88f813b",
+            "target": "d9526784-78dd-41a8-b679-aa55dacaedfe"
+        },
+        {
+            "id": "d9526784-78dd-41a8-b679-aa55dacaedfe-9d76b90f-a791-444c-8295-e6839432e586",
+            "type": "primary",
+            "source": "d9526784-78dd-41a8-b679-aa55dacaedfe",
+            "target": "9d76b90f-a791-444c-8295-e6839432e586"
+        }
+    ],
+    "segments": {
+        "type": "allCustomers"
+    },
+    "isDynamic": true,
+    "isActive": false,
+    "isPaused": false,
+    "isStopped": false,
+    "isDeleted": false,
+    "journeyEntrySettings": null,
+    "journeySettings": null,
+    "latestSave": "2024-04-30T02:38:45.847Z",
+    "latestChangerEmail": "laerciopesa30@hotmail.com"
+}

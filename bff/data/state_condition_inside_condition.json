@@ -1,0 +1,80 @@
+{
+  "StartAt": "Start",
+  "States": {
+    "Start": {
+      "Type": "Pass",
+      "Label": "Iniciar Workflow",
+      "Next": "NextState1"
+    },
+    "NextState1": {
+      "Type": "Pass",
+      "Result": "Next State 1",
+      "Label": "Primeiro Passo",
+      "Next": "NextState2"
+    },
+    "NextState2": {
+      "Type": "Pass",
+      "Result": "Next State 2",
+      "Label": "Segundo Passo",
+      "Next": "Choice1"
+    },
+    "Choice1": {
+      "Type": "Choice",
+      "Label": "Decisao1",
+      "Choices": [
+        {
+          "Variable": "$['input']",
+          "StringEquals": "true",
+          "Next": "NextState3"
+        },
+        {
+          "Variable": "$['input']",
+          "StringEquals": "false",
+          "Next": "NextState4"
+        }
+      ],
+      "Default": "End"
+    },
+    "NextState3": {
+      "Type": "Pass",
+      "Result": "Next State 3",
+      "Label": "Passo se TRUE",
+      "Next": "End"
+    },
+    "NextState4": {
+      "Type": "Pass",
+      "Result": "Next State 4",
+      "Label": "Passo se FALSE",
+      "Next": "Choice2"
+    },
+    "Choice2": {
+      "Type": "Choice",
+      "Label": "Decisao2",
+      "Choices": [
+        {
+          "Variable": "$['input']",
+          "StringEquals": "true",
+          "Next": "NextState5"
+        },
+        {
+          "Variable": "$['input']",
+          "StringEquals": "false",
+          "Next": "End"
+        }
+      ],
+      "Default": "End"
+    },
+    "NextState5": {
+      "Type": "Pass",
+      "Result": "Next State 4",
+      "Label": "Passo se FALSE",
+      "Next": "End"
+    },
+    "End": {
+      "Type": "Pass",
+      "Label": "Fim",
+      "Result": "End of workflow",
+      "End": true
+    }
+  }
+}
