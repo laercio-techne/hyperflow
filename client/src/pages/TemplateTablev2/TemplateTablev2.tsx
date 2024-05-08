@@ -4,7 +4,7 @@ import searchIconImage from "./svg/search-icon.svg";
 import threeDotsIconImage from "./svg/three-dots-icon.svg";
 import emptyDataImage from "./svg/empty-data.svg";
 import React, { Fragment, useEffect, useState } from "react";
-import Table from "components/Tablev2";
+import Table from "components/Table";
 import { format } from "date-fns";
 import { Menu, Transition } from "@headlessui/react";
 import ApiService from "services/api.service";
