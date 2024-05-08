@@ -1,4 +1,3 @@
-const convertASLToReactFlow = require('../utils/aslConvertion')
 const modelo1 = require('../data/state_default.json')
 const modelo2 = require('../data/state_2_condition_parallel.json')
 const modelo3 = require('../data/state_condition_inside_condition.json')
@@ -11,11 +10,8 @@ const initialState = (example) => {
     "Exemplo 3": modelo1,
   }
   
-  const { nodes, edges } = convertASLToReactFlow(map[example])
 
   return {
-    nodes,
-    edges,
     menu: [
       { label: "Ação", icon: "bi-skip-end-circle-fill", type: 'DefaultNode' },
       { label: "Condição", icon: "bi-question-circle-fill", type: 'DefaultNode' },

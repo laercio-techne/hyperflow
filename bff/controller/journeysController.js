@@ -4,10 +4,13 @@ const exampleOnboardingChecklist = require('../data/example_onboarding_checklist
 const generalEmailCampaign = require('../data/general_email_campaign.json')
 const threeBranchJourney = require('../data/three_branch_journey.json')
 
+const JorneyModel = require('../schemas/journeySchema')
+
 const data = [basicOnboarding, displayModal, exampleOnboardingChecklist, generalEmailCampaign, threeBranchJourney]
 
 module.exports = {
-  getListJourneys(_, res) {
+  async getListJourneys(_, res) {
+    const data = await JorneyModel.find()
     res.json({
       data,
       "totalPages": 1
@@ -17,17 +20,16 @@ module.exports = {
   visualLayout(_, res) {
     res.json(exampleOnboardingChecklist)
   },
-  getJourneyId(req, res) {
+  async getJourneyId(req, res) {
     const id = req.params.id
-    const resp = {
-      '2d07a17d-0bc7-4159-95ff-7a590cb40ed1': basicOnboarding,
-      'ec66039b-9ab3-4eaa-ab0d-a75ba04aa434': displayModal ,
-      'f7cb06d7-8658-4ab3-a92d-4d5fcbc6c1c7': exampleOnboardingChecklist,
-      'ed062d8b-4ebc-444c-978b-534e57e79618': generalEmailCampaign,
-      '7d85dbbd-7069-4282-ae9b-7ba760b99ef1': threeBranchJourney
+     
+    if (req.params.id === "tags") {
+      res.json([])
+      return 
     }
 
-    res.json(req.params.id === "tags" ? [] : resp[id])
+    const data = await JorneyModel.findById(id)
+    res.json(data)
   },
   patchListJourneys(_, res) {
     res.json(exampleOnboardingChecklist)
