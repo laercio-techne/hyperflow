@@ -239,7 +239,7 @@ const JourneyTablev2 = () => {
   return (
     <div className="bg-[#F3F4F6] p-5 flex flex-col gap-5 font-inter font-normal text-[14px] text-[#111827] leading-[22px]">
       <div className="flex justify-between">
-        <div className="text-[20px] font-semibold leading-[28px]">Journeys</div>
+        <div className="text-[20px] font-semibold leading-[28px]">Jornadas</div>
         <Button
           type={ButtonType.PRIMARY}
           onClick={() => setIsNameJourneyModalOpen(true)}
@@ -311,13 +311,13 @@ const JourneyTablev2 = () => {
             <Table
               isLoading={isLoading}
               headings={[
-                <div className="px-5 py-[10px] select-none">Name</div>,
+                <div className="px-5 py-[10px] select-none">Nome</div>,
                 <div className="px-5 py-[10px] select-none">Status</div>,
                 <div className="px-5 py-[10px] select-none">
-                  Enrolled customer
+                  -
                 </div>,
                 <div className="px-5 py-[10px] select-none">
-                  Last updated by
+                  Ultimo a editar
                 </div>,
                 <div
                   className="px-5 py-[10px] select-none flex gap-[2px] items-center cursor-pointer"
@@ -346,7 +346,7 @@ const JourneyTablev2 = () => {
                     });
                   }}
                 >
-                  <div>Last update</div>
+                  <div>Ultima atualização</div>
                   <div>
                     <img
                       src={
@@ -411,7 +411,7 @@ const JourneyTablev2 = () => {
                             }`}
                             onClick={() => duplicateJourney(row.id)}
                           >
-                            Duplicate
+                            Duplicar
                           </button>
                         )}
                       </Menu.Item>
@@ -423,7 +423,7 @@ const JourneyTablev2 = () => {
                             }`}
                             onClick={() => setJourneyToDelete(row.id)}
                           >
-                            Delete
+                            Deletar
                           </button>
                         )}
                       </Menu.Item>

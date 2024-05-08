@@ -1,22 +1,7 @@
 import Progress from "components/Progress";
-import React, { FC, ReactNode } from "react";
 
-interface TableProps<T> {
-  headings?: ReactNode[];
-  rowsData: T[];
-  rows?: ReactNode[][];
-  isLoading?: boolean;
-  className?: string;
-  headClassName?: string;
-  bodyClassName?: string;
-  selectedRow?: number;
-  onRowClick?: (i: number) => void;
-  trHeadingClassName?: string;
-}
-
-const Table = <T,>({
+const Table = ({
   headings,
-  rowsData,
   rows,
   isLoading,
   className = "",
@@ -25,9 +10,9 @@ const Table = <T,>({
   selectedRow,
   trHeadingClassName = "",
   onRowClick,
-}: TableProps<T>) => {
+}: any) => {
   return (
-    <table className={`rounded ${className ? className : ""}`}>
+    <table className={`rounded ${className || ""}`}>
       {headings && (
         <thead className={headClassName}>
           <tr
