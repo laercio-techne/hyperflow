@@ -22,8 +22,7 @@ const SocketContext = createContext<Socket | null>(null);
 const MAX_RETRIES = 5;
 
 export const SocketProvider = ({ children }: { children: ReactElement }) => {
-  const { userData, loading } = useAppSelector((state) => state.auth);
-  const { devModeState } = useAppSelector((state) => state.flowBuilder);
+  const { devModeState } = useAppSelector((state: { flowBuilder: any; }) => state.flowBuilder);
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -31,14 +30,9 @@ export const SocketProvider = ({ children }: { children: ReactElement }) => {
   const [retries, setRetries] = useState(0);
 
   useEffect(() => {
-    if (!constants.WS_BASE_URL || loading || !userData || socket || !id) return;
+    if (!constants.WS_BASE_URL || socket || !id) return;
 
     const newSocket = io(constants.WS_BASE_URL, {
-      auth: {
-        userId: userData.uId,
-        journeyId: id,
-        development: true,
-      },
       autoConnect: false,
       reconnection: true,
       reconnectionAttempts: 5,
@@ -46,7 +40,7 @@ export const SocketProvider = ({ children }: { children: ReactElement }) => {
     });
 
     setSocket(newSocket);
-  }, [userData, loading]);
+  }, []);
 
   const handleConnect = () => {
     if (!socket) return;

@@ -29,12 +29,12 @@ enum FilterOption {
 }
 
 const filterOptionToTextMap: Record<FilterOption, string> = {
-  [FilterOption.ALL]: "All",
-  [FilterOption.ACTIVE]: "Active",
-  [FilterOption.DRAFT]: "Draft",
-  [FilterOption.PAUSED]: "Paused",
-  [FilterOption.STOPPED]: "Stopped",
-  [FilterOption.ENROLLING]: "Enrolling",
+  [FilterOption.ALL]: "Todos",
+  [FilterOption.ACTIVE]: "Ativos",
+  [FilterOption.DRAFT]: "Criandos",
+  [FilterOption.PAUSED]: "Pausados",
+  [FilterOption.STOPPED]: "Parados",
+  [FilterOption.ENROLLING]: "Rodando",
 };
 
 const filterOptionsToRender: FilterOption[] = [

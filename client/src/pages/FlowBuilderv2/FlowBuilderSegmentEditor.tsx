@@ -1,5 +1,5 @@
 import { RadioGroup } from "@headlessui/react";
-import CheckBox from "components/Checkbox/Checkbox";
+import CheckBox from "components/Checkbox";
 import RadioOption from "components/Radio/RadioOption";
 import {
   addDays,

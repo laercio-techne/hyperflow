@@ -1,5 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "reducers/root.reducer";
+import { combineReducers } from "redux";
+import flowBuilderReducer from "reducers/flow-builder.reducer";
+import segmentReducer from "reducers/segment.reducer";
+
+const rootReducer = combineReducers({
+  flowBuilder: flowBuilderReducer,
+  segment: segmentReducer,
+});
+
+export default rootReducer;
 
 export const store = configureStore({
   reducer: rootReducer,

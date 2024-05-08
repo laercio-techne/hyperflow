@@ -36,7 +36,7 @@ import { Segment } from "types/Segment";
 import Button, {
   ButtonType,
 } from "../../../components/Elements/Buttonv2/Button";
-import FlowBuilderAutoComplete from "../../../components/AutoCompletev2/AutoCompletev2";
+import FlowBuilderAutoComplete from "../../../components/AutoCompletev2";
 import FilterBuilderDynamicInput from "../Elements/DynamicInput";
 import { isBefore } from "date-fns";
 import { useDispatch } from "react-redux";
@@ -46,7 +46,7 @@ import Select from "components/Elements/Selectv2";
 import { Workflow } from "types/Workflow";
 import axios, { CancelTokenSource } from "axios";
 import deepCopy from "utils/deepCopy";
-import AutoComplete from "../../../components/AutoCompletev2/AutoCompletev2";
+import AutoComplete from "../../../components/AutoCompletev2";
 
 interface FilterBuilderProps {
   settings: ConditionalSegmentsSettings | SegmentsSettings;

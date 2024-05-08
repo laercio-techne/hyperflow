@@ -1,5 +1,5 @@
 import React from "react";
-import CheckBox from "components/Checkbox/Checkbox";
+import CheckBox from "components/Checkbox";
 import PlatformSettingsComponents from "./PlatformSettingsComponents";
 import AndroidOnlySettings from "./AndroidOnlySettings";
 import Button, { ButtonType } from "components/Elements/Buttonv2";

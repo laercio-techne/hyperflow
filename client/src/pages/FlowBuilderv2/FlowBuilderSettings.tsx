@@ -1,5 +1,5 @@
 import { RadioGroup } from "@headlessui/react";
-import CheckBox from "components/Checkbox/Checkbox";
+import CheckBox from "components/Checkbox";
 import Button, { ButtonType } from "components/Elements/Buttonv2";
 import ToggleSwitch from "components/Elements/ToggleSwitch";
 import RadioOption from "components/Radio/RadioOption";
