@@ -6,7 +6,7 @@ import {
 } from "reducers/flow-builder.reducer";
 import deepCopy from "utils/deepCopy";
 import FlowBuilderModal from "../Elements/FlowBuilderModal";
-import FilterViewer from "../FilterViewer/FilterViewer";
+import FilterViewer from "../FilterViewer";
 const FilterBuilder = React.lazy(
   () => import("../FilterBuilder/FilterBuilder")
 );

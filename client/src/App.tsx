@@ -41,28 +41,10 @@ const App = ({ children }: any) => {
   };
 
   return (
-    <ColorContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        {/* @ts-ignore */}
-        <MTThemeProvider value={MTTheme}>
-          <CssBaseline enableColorScheme />
-          <ToastContainer
-            className={"z-[2147483647]"}
-            position="bottom-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="colored"
-          />
-          {children}
-        </MTThemeProvider>
-      </ThemeProvider>
-    </ColorContext.Provider>
+    <>
+      <CssBaseline enableColorScheme />
+      {children}
+    </>
   );
 };
 

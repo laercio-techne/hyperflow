@@ -3,7 +3,7 @@ import {
   SegmentsSettings,
   SegmentsSettingsType,
 } from "reducers/flow-builder.reducer";
-import FilterViewer from "./FilterViewer/FilterViewer";
+import FilterViewer from "./FilterViewer";
 
 interface EligibleUsersViewerProps {
   segmentsSettings: SegmentsSettings;

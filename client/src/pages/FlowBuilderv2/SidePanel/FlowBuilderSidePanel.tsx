@@ -300,7 +300,6 @@ const FlowBuilderSidePanel: any = ({ className }: any) => {
       selectedNode.type as NodeType
     );
 
-  console.log(isOpen)
   return (
     <>
     {isOpen && (

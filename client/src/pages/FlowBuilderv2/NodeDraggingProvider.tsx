@@ -12,10 +12,10 @@ import {
 } from "reducers/flow-builder.reducer";
 import ApiService from "services/api.service";
 import { useAppSelector, useAppDispatch } from "store/hooks";
-import { DrawerAction } from "../Drawer/drawer.fixtures";
-import { EdgeData } from "../Edges/EdgeData";
-import { NodeType, EdgeType } from "../FlowEditor";
-import { NodeData } from "../Nodes/NodeData";
+import { DrawerAction } from "pages/FlowBuilderv2/Drawer/drawer.fixtures";
+import { EdgeData } from "pages/Edges/EdgeData";
+import { NodeType, EdgeType } from "pages/FlowBuilderv2/FlowEditor";
+import { NodeData } from "pages/Nodes/NodeData";
 
 interface NodeDraggingProviderProps {
   flowRef: RefObject<HTMLDivElement>;

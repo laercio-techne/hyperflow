@@ -12,7 +12,9 @@ import { getLayoutedNodes } from "pages/FlowBuilderv2/layout.helper";
 import {
   Branch,
   BranchType,
+  LogicRelation,
   MessageNodeData,
+  MultisplitBranch,
   NodeData,
   TimeWindowTypes,
 } from "pages/FlowBuilderv2/Nodes/NodeData";

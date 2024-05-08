@@ -9,7 +9,7 @@ import { NodeAction } from "reducers/flow-builder.reducer";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { DrawerAction } from "../Drawer/drawer.fixtures";
 import { NodeType } from "../FlowEditor";
-import { dragActionsNotToDoBetweenNodes } from "../FlowPlugins/NodeDraggingProvider";
+import { dragActionsNotToDoBetweenNodes } from "../NodeDraggingProvider";
 
 export const PrimaryEdge: FC<EdgeProps> = ({
   sourceX,
