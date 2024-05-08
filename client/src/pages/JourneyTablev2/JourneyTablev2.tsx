@@ -60,12 +60,12 @@ interface JourneyRowData {
 }
 
 export enum JourneyStatus {
-  ACTIVE = "Active",
-  PAUSED = "Paused",
-  STOPPED = "Stopped",
-  DELETED = "Deleted",
-  DRAFT = "Draft",
-  ENROLLING = "Enrolling",
+  ACTIVE = "Ativo",
+  PAUSED = "Pausado",
+  STOPPED = "Parado",
+  DELETED = "Deletado",
+  DRAFT = "Pronto",
+  ENROLLING = "Rodando",
 }
 
 export const journeyStatusClassName: Record<JourneyStatus, string> = {
