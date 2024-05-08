@@ -408,7 +408,7 @@ const FlowBuilderSidePanel: any = ({ className }: any) => {
         <div className="h-full relative flex flex-col justify-stretch">
           <div className="p-5 border-b-[1px] flex flex-col gap-[5px]">
             <div className="font-inter flex items-center font-semibold text-[20px] leading-[28px]">
-              {selectedNode?.type
+              {/* {selectedNode?.type
                 ? (selectedNode.data.type === NodeType.MESSAGE ||
                     selectedNode?.data.type === NodeType.PUSH) &&
                   (selectedNode.data as MessageNodeData).template
@@ -417,9 +417,9 @@ const FlowBuilderSidePanel: any = ({ className }: any) => {
                       (selectedNode.data as MessageNodeData).template.type
                     ].text
                   : nodeTypeToNameMap[selectedNode.type as NodeType]
-                : ""}
-              {(selectedNode?.data.type === NodeType.MESSAGE ||
-                selectedNode?.data.type === NodeType.PUSH) && (
+                : ""} */}
+              {/* {(selectedNode?.data?.type === NodeType.MESSAGE ||
+                selectedNode?.data?.type === NodeType.PUSH) && (
                 <>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -448,11 +448,11 @@ const FlowBuilderSidePanel: any = ({ className }: any) => {
                     selectedNode={selectedNode}
                   />
                 </>
-              )}
+              )} */}
               <br />
             </div>
             <div className="font-inter font-normal text-[12px] leading-5 text-[#4B5563]">
-              {(() => {
+              {/* {(() => {
                 switch (selectedNode?.data.type) {
                   case NodeType.MESSAGE:
                     return "Users in this step will receive a message with the following template";
@@ -477,7 +477,7 @@ const FlowBuilderSidePanel: any = ({ className }: any) => {
                   default:
                     return "";
                 }
-              })()}
+              })()} */}
             </div>
           </div>
           <div className="h-full max-h-full mb-[60px] overflow-y-hidden">

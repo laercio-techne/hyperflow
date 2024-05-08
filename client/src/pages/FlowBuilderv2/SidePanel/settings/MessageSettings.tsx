@@ -33,7 +33,7 @@ const MessageSettings: FC<SidePanelComponentProps<MessageNodeData>> = ({
   const templateType = nodeData.template?.type;
   const selectedTemplate = nodeData.template?.selected;
 
-  const userData = useAppSelector((state) => state.auth.userData);
+  const userData = { pushPlatforms: []};
 
   const [templateList, setTemplateList] = useState<Template[]>([]);
   const dispatch = useDispatch();
