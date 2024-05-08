@@ -1,5 +1,5 @@
 import Pagination from "components/Pagination";
-import Table from "components/Table";
+import Table from "components/Tablev2";
 import { format } from "date-fns";
 import { journeyStatusClassName } from "pages/JourneyTablev2/JourneyTablev2";
 import { useEffect, useState } from "react";
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import ApiService from "services/api.service";
-import emptyDataImage from "pages/JourneyTablev2/svg/empty-data.svg";
+import emptyDataImage from "../../pages/JourneyTablev2/svg/empty-data.svg";
 
 interface Journey {
   id: string;

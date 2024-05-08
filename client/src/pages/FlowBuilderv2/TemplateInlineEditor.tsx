@@ -11,7 +11,7 @@ import {
 import ApiService from "services/api.service";
 import Template from "types/Template";
 import { toast } from "react-toastify";
-import Table from "components/Table";
+import Table from "components/Tablev2";
 import sortAscChevronsImage from "../TemplateTablev2/svg/sort-asc-chevrons.svg";
 import sortDescChevronsImage from "../TemplateTablev2/svg/sort-desc-chevrons.svg";
 import sortNoneChevronsImage from "../TemplateTablev2/svg/sort-none-chevrons.svg";

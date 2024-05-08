@@ -27,7 +27,7 @@ import Select from "components/Elements/Selectv2";
 import { StatementValueType } from "reducers/flow-builder.reducer";
 import DynamicInput from "pages/FlowBuilderv2/Elements/DynamicInput";
 import { Segment, SegmentType } from "types/Segment";
-import Table from "components/Table";
+import Table from "components/Tablev2";
 import sortAscChevronsImage from "./svg/sort-asc-chevrons.svg";
 import sortDescChevronsImage from "./svg/sort-desc-chevrons.svg";
 import sortNoneChevronsImage from "./svg/sort-none-chevrons.svg";

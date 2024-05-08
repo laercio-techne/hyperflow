@@ -1,7 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import Button, { ButtonType } from "components/Elements/Buttonv2";
 import Input from "components/Elements/Inputv2";
-import Table from "components/Table";
+import Table from "components/Tablev2";
 import { format } from "date-fns";
 import React, { Fragment, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
