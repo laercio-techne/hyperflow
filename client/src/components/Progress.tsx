@@ -1,4 +1,4 @@
-import DotProgress from "components/DotProgress/DotProgress";
+import DotProgress from "components/DotProgress";
 import { TailSpin } from "react-loader-spinner";
 import React from "react";
 
