@@ -10,7 +10,7 @@ import { NodeData } from "./NodeData";
 export const EmptyNode: FC<NodeProps<NodeData>> = ({
   isConnectable,
   id,
-  data: { disabled },
+  // data: { disabled },
 }) => {
   const drawerActionToNodeTypeMap: Record<DrawerAction, NodeType> = {
     [DrawerAction.CUSTOM_MODAL]: NodeType.MESSAGE,
@@ -47,7 +47,7 @@ export const EmptyNode: FC<NodeProps<NodeData>> = ({
   return (
     <div
       className={`empty-node w-[260px] h-[80px] rounded-lg bg-[#F3F4F6] border-2 border-dashed border-[#9CA3AF] flex justify-center items-center ${
-        disabled ? "opacity-50 cursor-not-allowed" : ""
+        false ? "opacity-50 cursor-not-allowed" : ""
       } ${isDraggedOver ? "!border-[#6366F1] !bg-[#E0E7FF]" : ""}${
         outgoers.length === 0 ? " last-empty-node" : ""
       }`}

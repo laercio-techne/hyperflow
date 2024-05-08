@@ -119,8 +119,8 @@ export const applyLayoutCorrections = (
 
   for (const child of children) {
     const childHeight =
-      (nodeTypeHeightMap[child.type as NodeType] || 0) +
-      (child.data.stats ? STATS_HEIGHT : 0);
+      (nodeTypeHeightMap[child.type as NodeType] || 0) 
+      // + (child.data.stats ? STATS_HEIGHT : 0);
 
     translateTree(child, nodes, edges, {
       x: 0,
@@ -134,7 +134,7 @@ export const applyLayoutCorrections = (
 
     if (
       child.type &&
-      child.data.stats &&
+      // child.data.stats &&
       childOutgoers.length === 1 &&
       nodeTypesWithPossibleStats.includes(child.type)
     ) {

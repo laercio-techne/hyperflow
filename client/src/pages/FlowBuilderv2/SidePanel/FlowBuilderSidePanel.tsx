@@ -287,7 +287,7 @@ const FlowBuilderSidePanel: any = ({ className }: any) => {
     // TODO: CHECK TRACKER TEMPLATE NONSTOP REFRESHING
     if (nodeData.type !== NodeType.TRACKER || !selectedNode) return;
 
-    setNodeData({ ...nodeData, needsCheck: false });
+    // setNodeData({ ...nodeData, needsCheck: false });
   }, [nodeData]);
 
   useEffect(() => {

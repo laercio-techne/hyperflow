@@ -8,7 +8,7 @@ import deepCopy from "utils/deepCopy";
 import FlowBuilderModal from "../Elements/FlowBuilderModal";
 import FilterViewer from "../FilterViewer";
 const FilterBuilder = React.lazy(
-  () => import("../FilterBuilder/FilterBuilder")
+  () => import("../FilterBuilder")
 );
 
 interface FlowBuilderMultisplitModalProps {

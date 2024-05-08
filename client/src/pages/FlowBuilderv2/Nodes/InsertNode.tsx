@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Handle, NodeProps, Position } from "reactflow";
 import { NodeData } from "./NodeData";
 import { NodeDevModeHighlighter } from "./NodeDevModeHighlighter";
@@ -6,12 +6,12 @@ import { NodeDevModeHighlighter } from "./NodeDevModeHighlighter";
 export const InsertNode: FC<NodeProps<NodeData>> = ({
   isConnectable,
   id,
-  data: { disabled },
+  data,
 }) => {
   return (
     <div
       className={`relative w-[260px] h-[80px] rounded-lg border-2 border-dashed flex justify-center items-center !border-[#6366F1] !bg-[#E0E7FF] ${
-        disabled ? "opacity-50 cursor-not-allowed" : ""
+        data?.disabled ? "opacity-50 cursor-not-allowed" : ""
       }`}
       onDragOver={(e) => {
         e.stopPropagation();
