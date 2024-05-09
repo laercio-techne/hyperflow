@@ -1,4 +1,3 @@
-import { OnboardingAction } from "pages/Onboardingv2/OnboardingSandbox";
 import { RefObject, FC, useEffect } from "react";
 import { useViewport, Edge, getOutgoers, Node } from "reactflow";
 import {
@@ -26,7 +25,6 @@ const MAXIMUM_INSERT_RADIUS = 130;
 export const dragActionsNotToDoBetweenNodes: (
   | DrawerAction
   | NodeAction
-  | OnboardingAction
   | undefined
 )[] = [
   DrawerAction.EXIT,
@@ -186,16 +184,6 @@ const NodeDraggingProvider: FC<NodeDraggingProviderProps> = ({ flowRef }) => {
       return;
 
     dispatch(transformInsertNodeIntoEmptyNode(insertNode.id));
-
-    if (isOnboarding) {
-      if (action === OnboardingAction.NOTHING) return;
-      const targetId = e.dataTransfer?.getData("targetId");
-
-      if (targetId && insertNode.id !== targetId) return;
-
-      dispatch(handleDrawerAction({ id: insertNode.id, action }));
-      return;
-    }
 
     (async () => {
       try {

@@ -1,6 +1,6 @@
 import MulisplitSettings from "./settings/MulisplitSettings";
 import { Transition } from "@headlessui/react";
-import { FC, ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import {
   changeNodeData,
@@ -15,7 +15,6 @@ import Button, {
 import { NodeType } from "../FlowEditor";
 import FlowBuilderDeleteModal from "../Modals/FlowBuilderDeleteModal";
 import FlowBuilderSaveTrackerModal from "../Modals/FlowBuilderSaveTrackerModal";
-import { messageFixtures } from "../Nodes/MessageNode";
 import { MessageNodeData, NodeData } from "../Nodes/NodeData";
 import MessageSettings from "./settings/MessageSettings";
 import TimeDelaySettings from "./settings/TimeDelaySettings";
@@ -26,7 +25,6 @@ import WaitUntilSettings from "./settings/WaitUntilSettings";
 import JumpToSettings from "./settings/JumpToSettings";
 import { isEqual } from "lodash";
 import Modal from "components/Elements/Modal";
-import { FlowBuilderMessageRenameModal } from "../Modals/FlowBuilderMessageRenameModal";
 import { MessageType } from "types/Workflow";
 import { Node } from "reactflow";
 import ExperimentNodeSettings from "./settings/ExperimentNodeSettings";

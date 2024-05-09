@@ -20,7 +20,7 @@ import Pagination from "components/Pagination";
 import { useDebounce } from "react-use";
 import { MessageType } from "types/Workflow";
 import { capitalize } from "lodash";
-import ApiConfig from "constants/api";
+import { ApiConfig } from "../../constants";
 import { requestCreationBody } from "pages/TemplateTablev2/Modals/NameTemplate";
 import FlowBuilderModal from "./Elements/FlowBuilderModal";
 

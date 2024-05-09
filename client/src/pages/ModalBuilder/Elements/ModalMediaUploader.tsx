@@ -1,14 +1,10 @@
 import ApiService from "services/api.service";
 import { ApiConfig } from "../../../constants";
 import { toast } from "react-toastify";
-import UploadSVG from "@heroicons/react/20/solid/CloudArrowUpIcon";
 import { EditorMenuOptions } from "../ModalEditorMainMenu";
 import { ImageBackground, Media, ModalState } from "../types";
-import CloseSVG from "@heroicons/react/20/solid/XMarkIcon";
 import { useState } from "react";
-import tokenService from "services/token.service";
 import axios, { AxiosError } from "axios";
-import { LinearProgress } from "@mui/material";
 import config, { API_BASE_URL_KEY } from "config";
 
 interface IModalMediaUploaderProps {
@@ -53,9 +49,6 @@ const ModalMediaUploader = ({
         method: "post",
         url: `${config.get(API_BASE_URL_KEY)}/accounts/upload-public-media`,
         data: formData,
-        headers: {
-          Authorization: `Bearer ${tokenService.getLocalAccessToken()}`,
-        },
         onUploadProgress: ({ loaded, total }) => {
           if (total) setProgress(loaded / total);
         },

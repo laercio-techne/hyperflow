@@ -9,8 +9,6 @@ import FlowBuilderModal from "../Elements/FlowBuilderModal";
 import { ChromeIcon, TutorialImage } from "../Icons";
 import ExclamationTriangleIcon from "@heroicons/react/20/solid/ExclamationTriangleIcon";
 import { Link } from "react-router-dom";
-import { NodeType } from "../FlowEditor";
-import { useDevSocketConnection } from "../useDevSocketConnection";
 
 interface FlowBuilderDevModeModalProps {
   isOpen: boolean;
@@ -22,7 +20,6 @@ const FlowBuilderDevModeModal = ({
   onClose,
 }: FlowBuilderDevModeModalProps) => {
   const { devModeState, nodes } = useAppSelector((state) => state.flowBuilder);
-  const { handleConnect, handleDisconnect } = useDevSocketConnection();
   const dispatch = useDispatch();
 
   return (
@@ -56,18 +53,6 @@ const FlowBuilderDevModeModal = ({
                   Go to connect
                 </Button>
               </Link>
-            </div>
-            <div className="p-[10px] bg-[#F3F4F6] flex justify-between items-center w-full rounded-lg">
-              <div className="text-black text-sm font-semibold font-inter leading-snug">
-                Step 2. Verify the connection status.
-              </div>
-              <Button
-                type={ButtonType.PRIMARY}
-                className="!border-[#E5E7EB] !text-[white]"
-                onClick={handleConnect}
-              >
-                Refresh
-              </Button>
             </div>
           </div>
           <div className="flex w-full justify-end gap-2">
@@ -112,24 +97,6 @@ const FlowBuilderDevModeModal = ({
               </div>
               <TutorialImage />
             </div>
-          </div>
-          <div className="flex w-full justify-end gap-2">
-            <Button
-              type={ButtonType.SECONDARY}
-              className="!border-[#E5E7EB] !text-[#111827]"
-              onClick={handleDisconnect}
-            >
-              Cancel
-            </Button>
-            <Button
-              disabled={devModeState.status === ConnectionStatus.Connecting}
-              type={ButtonType.PRIMARY}
-              onClick={handleConnect}
-            >
-              {devModeState.status === ConnectionStatus.Connecting
-                ? "Trying to connect..."
-                : "Open Dev Mode"}
-            </Button>
           </div>
         </>
       )}

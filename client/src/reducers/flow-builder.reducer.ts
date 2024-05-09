@@ -18,7 +18,7 @@ import {
   NodeData,
   TimeWindowTypes,
 } from "pages/FlowBuilderv2/Nodes/NodeData";
-import { JourneyStatus } from "pages/JourneyTablev2/JourneyTablev2";
+import { JourneyStatus } from "pages/JourneyTablev2";
 import { OnboardingAction } from "pages/Onboardingv2/OnboardingSandbox";
 import { PushBuilderData } from "pages/PushBuilder/PushBuilderContent";
 import {

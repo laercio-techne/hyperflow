@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: techne
+      MONGO_INITDB_ROOT_PASSWORD: T3ch@2024
+      MONGO_INITDB_DATABASE: hyperflow

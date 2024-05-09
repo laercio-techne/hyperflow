@@ -120,8 +120,8 @@ const flowBuilderDrawerFixtures: FlowBuilderDrawerFixture[] = [
     groupName: "Paralelo",
     children: [
       {
-        id: DrawerAction.MULTISPLIT,
-        icon: UserAttributeIcon(),
+        id: DrawerAction.EXPERIMENT,
+        icon: ExperimentIcon(),
         text: "Paralelo",
       },
     ],

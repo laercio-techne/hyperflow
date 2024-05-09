@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
  
 module.exports = () => {
-  const url = "mongodb+srv://techne:T3ch%402024@cluster0.zakhwh0.mongodb.net/hyperflow";
+  const url = "mongodb://techne:T3ch%402024@localhost:27017/hyperflow?authSource=admin";
  
   try {
     mongoose.connect(url, {

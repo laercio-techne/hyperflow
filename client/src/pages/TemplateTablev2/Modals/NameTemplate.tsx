@@ -4,12 +4,8 @@ import { GenericButton, Input } from "components/Elements";
 import { useNavigate } from "react-router-dom";
 import { TemplateType } from "types/Template";
 import Select from "components/Elements/Selectv2";
-import ApiConfig from "../../../constants/api";
+import { ApiConfig } from "../../../constants";
 import ApiService from "services/api.service";
-import {
-  FallBackAction,
-  WebhookMethod,
-} from "pages/WebhookBuilder/WebhookSettings";
 import { defaultModalState } from "pages/ModalBuilder/ModalBuilder";
 
 export interface INameSegmentForm {

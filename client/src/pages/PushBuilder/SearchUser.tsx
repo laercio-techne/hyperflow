@@ -1,5 +1,5 @@
 import Select from "components/Elements/Selectv2";
-import ApiConfig from "constants/api";
+import { ApiConfig } from "../../constants";
 import { useEffect, useState } from "react";
 import { useDebounce } from "react-use";
 import ApiService from "services/api.service";

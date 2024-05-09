@@ -4,8 +4,6 @@ import FlowBuilderHeader from "./Header/FlowBuilderHeader";
 import FlowEditor from "./FlowEditor";
 import { useThrottle } from "react-use";
 import { useAppDispatch, useAppSelector } from "store/hooks";
-import FlowBuilderSegmentEditor from "./FlowBuilderSegmentEditor";
-import FlowBuilderReview from "./FlowBuilderReview";
 import { useParams } from "react-router-dom";
 import ApiService from "services/api.service";
 import { MessageNodeData, NodeData } from "./Nodes/NodeData";
@@ -33,10 +31,8 @@ import {
 } from "reducers/flow-builder.reducer";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { JourneyStatus } from "pages/JourneyTablev2/JourneyTablev2";
+import { JourneyStatus } from "pages/JourneyTablev2";
 import { NodeType } from "./FlowEditor";
-import { SocketProvider } from "./useDevSocketConnection";
-import FlowBuilderSettings from "./FlowBuilderSettings";
 import { capitalize } from "lodash";
 import PushBuilder from "pages/PushBuilder/PushBuilder";
 import { MessageType } from "types/Workflow";
@@ -225,7 +221,6 @@ const FlowBuilderv2 = () => {
   };
 
   return (
-    <SocketProvider>
       <>
         <div
           className={`${
@@ -236,7 +231,7 @@ const FlowBuilderv2 = () => {
           <div className="relative flex w-full h-full max-h-[calc(100%-60px)]">
             {flowBuilderState.stepperIndex === 0 && <FlowBuilderDrawer />}
 
-            {flowBuilderState.stepperIndex === 0 ? (
+            {/* {flowBuilderState.stepperIndex === 0 ? (
               <FlowEditor />
             ) : flowBuilderState.stepperIndex === 1 ? (
               <FlowBuilderSegmentEditor />
@@ -244,12 +239,13 @@ const FlowBuilderv2 = () => {
               <FlowBuilderSettings />
             ) : (
               <FlowBuilderReview />
-            )}
+            )} */}
+
+            <FlowEditor />
           </div>
         </div>
         {TemplateRender()}
       </>
-    </SocketProvider>
   );
 };
 

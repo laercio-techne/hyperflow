@@ -18,12 +18,10 @@ import Button, {
   ButtonType,
 } from "../../../components/Elements/Buttonv2/Button";
 import FlowBuilderStartModal from "../Modals/FlowBuilderStartModal";
-import CodeBracketIcon from "@heroicons/react/24/outline/CodeBracketIcon";
 import ArrowLeftIcon from "@heroicons/react/24/outline/ArrowLeftIcon";
 import posthog from "posthog-js";
 import { useNavigate } from "react-router-dom";
 import { FlowBuilderDevModeModal } from "../Modals/FlowBuilderDevModeModal";
-import { useDevSocketConnection } from "../useDevSocketConnection";
 
 // TODO: update validation for new types
 const isValidNodes = (nodes: Node<NodeData | EdgeData>[]): boolean => {
@@ -66,7 +64,6 @@ const FlowBuilderHeader = () => {
   const [isErrorNextModalOpen, setIsErrorNextModalOpen] = useState(false);
   const [isStartModalOpen, setIsStartModalOpen] = useState(false);
   const navigate = useNavigate();
-  const { handleDisconnect } = useDevSocketConnection();
   const {
     flowName,
     stepperIndex,

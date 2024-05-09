@@ -1,7 +1,7 @@
 import Pagination from "components/Pagination";
 import Table from "components/Table";
 import { format } from "date-fns";
-import { journeyStatusClassName } from "pages/JourneyTablev2/JourneyTablev2";
+import { journeyStatusClassName } from "pages/JourneyTablev2";
 import { useEffect, useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import { useNavigate } from "react-router-dom";

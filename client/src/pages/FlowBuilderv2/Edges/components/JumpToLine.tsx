@@ -1,4 +1,4 @@
-import React, { DragEvent, FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { getBezierPath, Position, useViewport, useNodes } from "reactflow";
 import {
@@ -6,38 +6,25 @@ import {
   pathfindingAStarNoDiagonal,
   svgDrawSmoothLinePath,
 } from "@tisoap/react-flow-smart-edge";
-import { NodeType } from "pages/FlowBuilderv2/FlowEditor";
 import { v4 as uuid } from "uuid";
 import { useAppDispatch } from "store/hooks";
 import { selectNode } from "reducers/flow-builder.reducer";
 
-interface JumpToLineProps {
-  jumpToNodeId: string;
-  targetId?: string;
-  setTargetId: (targetId?: string) => void;
-}
-
-const JumpToLine: FC<JumpToLineProps> = ({
+const JumpToLine: any = ({
   jumpToNodeId,
   targetId,
   setTargetId,
-}) => {
+}: any) => {
   const dispatch = useAppDispatch();
-
   const nodes = useNodes();
-
   const jumpToNode = nodes.find((node) => node.id === jumpToNodeId);
-
   const sourceRef = useRef<HTMLDivElement>(null);
   const positionWrapperRef = useRef<HTMLDivElement>(null);
-
   const { x: viewX, y: viewY, zoom } = useViewport();
-
   const [edgePath, setEdgePath] = useState<string>();
   const [sourceTop, setSourceTop] = useState<number>();
   const [sourceLeft, setSourceLeft] = useState<number>();
   const [isHovered, setIsHovered] = useState(false);
-
   const flowContainer = document.querySelector(".react-flow");
   const edgesContainer = document.querySelector(".react-flow__edges > g");
 
@@ -169,9 +156,7 @@ const JumpToLine: FC<JumpToLineProps> = ({
       return;
     }
 
-    const dumbPathFunction = getBezierPath;
-
-    const [newEdgePath] = dumbPathFunction({
+    const [newEdgePath] = getBezierPath({
       sourceX,
       sourceY,
       targetX,
@@ -194,7 +179,6 @@ const JumpToLine: FC<JumpToLineProps> = ({
   const markerUUID = uuid();
 
   const isActive = Boolean(jumpToNode?.selected) || isHovered;
-
   const currentColor = isActive ? "#4338CA" : "#111827";
 
   return (
@@ -208,7 +192,6 @@ const JumpToLine: FC<JumpToLineProps> = ({
           }}
           onClick={(e) => {
             e.stopPropagation();
-            console.log("click");
             dispatch(selectNode(jumpToNodeId));
           }}
           onMouseEnter={() => setIsHovered(true)}
@@ -238,26 +221,6 @@ const JumpToLine: FC<JumpToLineProps> = ({
                           orient="auto"
                           markerUnits="strokeWidth"
                         >
-                          {/* <line
-                        x1="0"
-                        y1="0"
-                        x2="10"
-                        y2="3.5"
-                        style={{
-                          stroke: "#4338CA",
-                          fill: "#4338CA",
-                        }}
-                      />
-                      <line
-                        x1="0"
-                        y1="7"
-                        x2="10"
-                        y2="3.5"
-                        style={{
-                          stroke: "#4338CA",
-                          fill: "#4338CA",
-                        }}
-                      /> */}
                           <path
                             d="M 3.5 3.5 L 0 7 L 3.5 3.5 L 0 0 Z"
                             style={{
@@ -268,9 +231,6 @@ const JumpToLine: FC<JumpToLineProps> = ({
                         </marker>
                       </defs>
                       <path
-                        onClick={() => {
-                          console.log("PATH CLICK");
-                        }}
                         className="react-flow__edge-path"
                         style={{
                           strokeWidth: 3,
@@ -283,43 +243,6 @@ const JumpToLine: FC<JumpToLineProps> = ({
                         d={edgePath}
                         markerEnd={`url(#arrowhead${markerUUID})`}
                       />
-
-                      {/* <path
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      console.log("PATH INTERACTION CLICK");
-                    }}
-                    onMouseDown={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      console.log("PATH MOUSE DOWN");
-                    }}
-                    onMouseDownCapture={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      console.log("PATH MOUSE DOWN CAPTURE");
-                    }}
-                    onDragStart={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      console.log("DRAG START");
-                    }}
-                    onDrag={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      console.log("PATH INTERACTION DRAG");
-                    }}
-                    className="react-flow__edge-interaction cursor-move"
-                    style={{
-                      strokeWidth: 10,
-                      stroke: "transparent",
-                      fill: "transparent",
-                      outline: "none",
-                      pointerEvents: "all",
-                    }}
-                    d={edgePath}
-                  /> */}
                     </g>
                   )}
                 </>,

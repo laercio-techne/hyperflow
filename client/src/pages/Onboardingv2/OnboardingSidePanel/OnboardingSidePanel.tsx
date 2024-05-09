@@ -7,14 +7,14 @@ import TimeDelaySettings from "pages/FlowBuilderv2/SidePanel/settings/TimeDelayS
 import TimeWindowSettings from "pages/FlowBuilderv2/SidePanel/settings/TimeWindowSettings";
 import UserAttributeSettings from "pages/FlowBuilderv2/SidePanel/settings/UserAttributeSettings";
 import WaitUntilSettings from "pages/FlowBuilderv2/SidePanel/settings/WaitUntilSettings";
-import React, { FC, ReactNode, useEffect, useState } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import { changeNodeData, deselectNodes } from "reducers/flow-builder.reducer";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import deepCopy from "utils/deepCopy";
 import Button, {
   ButtonType,
-} from "../../../components/Elements/Buttonv2/Button";
+} from "components/Elements/Buttonv2/Button";
 import MessageSettings from "./settings/MessageSettings";
 
 export interface SidePanelComponentProps<T extends NodeData = NodeData> {
@@ -35,12 +35,12 @@ const OnboardingSidePanel: FC<OnboardingSidePanelProps> = ({
   isSaveDisabled,
   onSaveClick,
 }) => {
-  const { nodes, isOnboardingWaitUntilTooltipVisible } = useAppSelector(
-    (state) => state.flowBuilder
+  const { nodes } = useAppSelector(
+    (state: any) => state.flowBuilder
   );
   const dispatch = useAppDispatch();
 
-  const selectedNode = nodes.find((node) => node.selected);
+  const selectedNode = nodes.find((node: any) => node.selected);
 
   const [nodeData, setNodeData] = useState<NodeData>(
     deepCopy({ ...selectedNode?.data })

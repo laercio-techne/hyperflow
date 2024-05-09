@@ -1,5 +1,5 @@
 import { AxiosError } from "axios";
-import ApiConfig from "constants/api";
+import { ApiConfig } from "../../constants";
 import { isEqual } from "lodash";
 import TemplateInlineEditor from "pages/FlowBuilderv2/TemplateInlineEditor";
 import { useEffect, useState } from "react";

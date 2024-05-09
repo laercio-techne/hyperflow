@@ -1,7 +1,7 @@
 import { DelayData } from "pages/FlowBuilderv2/Nodes/NodeData";
-import React, { FC } from "react";
+import { FC } from "react";
 import { useAppSelector } from "store/hooks";
-import onboardingCursorImage from "../../../Onboardingv2/svg/onboarding-cursor.svg";
+import onboardingCursorImage from "pages/Onboardingv2/svg/onboarding-cursor.svg";
 
 interface TimeDelayEditorProps {
   delay: DelayData;
@@ -10,7 +10,7 @@ interface TimeDelayEditorProps {
 
 const TimeDelayEditor: FC<TimeDelayEditorProps> = ({ delay, onChange }) => {
   const { isOnboarding, isOnboardingWaitUntilTimeSettingTooltipVisible } =
-    useAppSelector((store) => store.flowBuilder);
+    useAppSelector((store: any) => store.flowBuilder);
 
   return (
     <div className="relative flex items-center gap-[10px] w-full h-[32px] mt-[1px] p-[1px]">

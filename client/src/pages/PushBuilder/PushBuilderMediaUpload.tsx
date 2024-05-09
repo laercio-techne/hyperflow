@@ -1,9 +1,8 @@
 import ApiService from "services/api.service";
 import { toast } from "react-toastify";
 import { useId, useState } from "react";
-import tokenService from "services/token.service";
 import axios, { AxiosError } from "axios";
-import ApiConfig from "../../constants/api";
+import { ApiConfig } from "../../constants";
 import PlusIcon from "@heroicons/react/20/solid/PlusIcon";
 import config, { API_BASE_URL_KEY } from "config";
 
@@ -43,9 +42,6 @@ const PushBuilderMediaUpload = ({
         method: "post",
         url: `${config.get(API_BASE_URL_KEY)}/accounts/upload-public-media`,
         data: formData,
-        headers: {
-          Authorization: `Bearer ${tokenService.getLocalAccessToken()}`,
-        },
         onUploadProgress: ({ loaded, total }) => {
           if (total) setProgress(loaded / total);
         },

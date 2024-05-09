@@ -20,12 +20,11 @@ export interface FlowBuilderDrawerFixture {
   }[];
 }
 
+
 const FlowBuilderDrawer: any = ({ fixtures }: any) => {
   const fixturesToRender = fixtures || defaultFixtures;
 
-  const { isOnboarding, isDrawerDisabled } = useAppSelector(
-    (state: any) => state.flowBuilder
-  );
+  const { isOnboarding, isDrawerDisabled } = useAppSelector((state: any) => state.flowBuilder);
 
   const dispatch = useAppDispatch();
 

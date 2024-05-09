@@ -1,8 +1,6 @@
 import ReactFlow, {
   applyNodeChanges,
-  ControlButton,
   Controls,
-  EdgeChange,
   EdgeProps,
   MarkerType,
   Node,
@@ -15,7 +13,6 @@ import {
   changeNodeData,
   ConnectionStatus,
   deselectNodes,
-  handleDevModeState,
   recountAvailableNodes,
   resetDevMode,
   setJumpToTargettingNode,
@@ -40,9 +37,6 @@ import { FC, useEffect, useRef } from "react";
 import NodeDraggingProvider from "./NodeDraggingProvider";
 import Button, { ButtonType } from "components/Elements/Buttonv2";
 import { JumpToNodeData } from "./Nodes/NodeData";
-import { DevModeControlHint } from "./DevModeControlHint";
-import useDevKeysHandler from "./useDevKeysHandler";
-import { useDevSocket } from "./useDevSocketConnection";
 import { MultisplitNode } from "./Nodes/MultisplitNode";
 import { ExperimentNode } from "./Nodes/ExperimentNode";
 
@@ -117,22 +111,12 @@ const FlowEditor: FC<FlowEditorProps> = ({
     isOnboarding,
     jumpToTargettingNode,
     devModeState,
-  } = useAppSelector((state) => state.flowBuilder);
-  useDevKeysHandler();
-  const socket = useDevSocket();
+  } = useAppSelector((state: any) => state.flowBuilder);
   const dispatch = useAppDispatch();
+  const flowRef = useRef(null);
+  const selectedNode = nodes.find((node: any) => node.selected);
 
   const onNodesChange = (changes: NodeChange[]) => {
-    if (devModeState.status === ConnectionStatus.Connected) {
-      changes = changes.filter((change) => change.type !== "select");
-    } else {
-      // changes = changes.filter(
-        // (change) =>
-          // change.type === "select" &&
-          // nodes.find((node) => node.id === change.id)?.type !== NodeType.EMPTY
-      // );
-    }
-
     dispatch(setNodes(applyNodeChanges(changes, nodes)));
   };
 
@@ -159,19 +143,6 @@ const FlowEditor: FC<FlowEditorProps> = ({
       )
     );
   };
-
-  const handleDevModeClick = (node: Node<any, string | undefined>) => {
-
-
-    socket?.emit("moveToNode", node.id);
-  };
-
-  const onEdgesChange = (changes: EdgeChange[]) => {
-  };
-
-  const flowRef = useRef<HTMLDivElement>(null);
-
-  const selectedNode = nodes.find((node) => node.selected);
 
   useEffect(() => {
     if (!jumpToTargettingNode || !selectedNode) return;
@@ -244,10 +215,8 @@ const FlowEditor: FC<FlowEditorProps> = ({
               ev.setViewport({ x: x - 200, y, zoom: 0.8 });
             }
           }}
-          onNodeClick={(_, node) => handleDevModeClick(node)}
           onNodeDoubleClick={(_, node) => handleDevModeDBClick(node)}
           onNodesChange={onNodesChange}
-          onEdgesChange={onEdgesChange}
           nodesFocusable={false}
           onMove={onMove}
           onMoveEnd={onMoveEnd}
@@ -275,9 +244,6 @@ const FlowEditor: FC<FlowEditorProps> = ({
             position="top-left"
             className="rounded-sm"
           >
-            {devModeState.status !== ConnectionStatus.Disabled && (
-              <DevModeControlHint />
-            )}
           </Controls>
         </ReactFlow>
         {!isViewMode && !isOnboarding && stepperIndex === 0 && (

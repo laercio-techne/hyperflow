@@ -1,6 +1,5 @@
 import axios from "axios";
 import { ApiConfig, AppConfig } from "../constants";
-import TokenService from "./token.service";
 import config, { API_BASE_URL_KEY } from "config";
 
 export interface ApiServiceArgs<T extends Record<string, any>> {
@@ -20,10 +19,6 @@ const instance = axios.create({
 });
 instance.interceptors.request.use(
   (conf) => {
-    const token = TokenService.getLocalAccessToken();
-    if (token && conf?.headers) {
-      conf.headers.Authorization = "Bearer " + token;
-    }
     return conf;
   },
   (error) => {
@@ -39,16 +34,9 @@ instance.interceptors.response.use(
     if (originalConfig.url === ApiConfig.login) {
     }
     if (originalConfig.url !== ApiConfig.login && err.response) {
-      // Access Token was expired
       if (err.response.status === 401 && !originalConfig._retry) {
         originalConfig._retry = true;
         try {
-          // FIXME: endpoint does not exist
-          const rs = await instance.post(ApiConfig.refreshtoken, {
-            refreshToken: TokenService.getLocalRefreshToken(),
-          });
-          const { accessToken } = rs.data;
-          TokenService.updateLocalAccessToken(accessToken);
           return await instance(originalConfig);
         } catch (_error) {
           return Promise.reject(_error);

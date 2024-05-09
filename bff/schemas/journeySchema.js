@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const normalize = require("normalize-mongoose");
 
-const JorneySchema = new mongoose.Schema({
+const JourneySchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -56,7 +56,6 @@ const JorneySchema = new mongoose.Schema({
   },
 });
 
-const JorneyModel = mongoose.model("Jorneys", JorneySchema);
-
-JorneySchema.plugin(normalize);
-module.exports =  JorneyModel;
+const JourneyModel = mongoose.model("Journeys", JourneySchema);
+JourneySchema.plugin(normalize);
+module.exports =  JourneyModel;
