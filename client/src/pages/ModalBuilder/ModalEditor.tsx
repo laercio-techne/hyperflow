@@ -1,8 +1,5 @@
 import React, { FC, ReactNode } from "react";
 import LeftArrowSVG from "@heroicons/react/20/solid/ChevronLeftIcon";
-import AlignCenterSVG from "@heroicons/react/20/solid/Bars3Icon";
-import AlignLeftSVG from "@heroicons/react/20/solid/Bars3BottomLeftIcon";
-import AlignRightSVG from "@heroicons/react/20/solid/Bars3BottomRightIcon";
 import Draggable from "react-draggable";
 import ModalEditorMainMenu, { EditorMenuOptions } from "./ModalEditorMainMenu";
 import ModalEditorTitleMenu from "./ModalEditorTitleMenu";

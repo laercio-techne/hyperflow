@@ -4,6 +4,7 @@ const path = require('path');
 const cors = require('cors')
 const app = express()
 const connectDB = require("./database.js"); 
+const bodyParser = require('body-parser')
 
 const corsOption = {
   credentials: true,
@@ -12,6 +13,9 @@ const corsOption = {
 
 app.use(cors(corsOption));
 app.engine('mustache', mustacheExpress());
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.set('view engine', 'html');
 app.set('views', __dirname + '/dist');

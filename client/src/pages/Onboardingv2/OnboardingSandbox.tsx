@@ -104,19 +104,6 @@ const drawerFixtures: FlowBuilderDrawerFixture[] = [
         text: "SMS",
         disabled: true,
       },
-      // Removed for 1 release
-      // {
-      //   id: OnboardingAction.NOTHING,
-      //   icon: SlackIcon(),
-      //   text: "Slack",
-      //   disabled: true,
-      // },
-      // {
-      //   id: OnboardingAction.NOTHING,
-      //   icon: PushIcon(),
-      //   text: "Push Notification",
-      //   disabled: true,
-      // },
       {
         id: OnboardingAction.NOTHING,
         icon: WebhookIcon(),

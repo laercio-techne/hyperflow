@@ -12,6 +12,7 @@ import {
   CustomModalIcon,
   UserAttributeIcon,
   ExperimentIcon,
+  CheckIcon
 } from "pages/FlowBuilderv2/Icons";
 import { FlowBuilderDrawerFixture } from "./FlowBuilderDrawer";
 
@@ -35,96 +36,105 @@ export enum DrawerAction {
 
 const flowBuilderDrawerFixtures: FlowBuilderDrawerFixture[] = [
   {
-    groupName: "Actions",
+    groupName: "Serviços",
     children: [
       {
-        id: DrawerAction.EMAIL,
-        icon: EmailIcon(),
-        text: "Email",
+        id: DrawerAction.SMS,
+        icon: WebhookIcon(),
+        text: "Validar Falta",
       },
       {
         id: DrawerAction.SMS,
-        icon: SMSIcon(),
-        text: "SMS",
+        icon: WebhookIcon(),
+        text: "Validar Dia Semana",
       },
-      // Removed for 1 release
-      // {
-      //   id: DrawerAction.SLACK,
-      //   icon: SlackIcon(),
-      //   text: "Slack",
-      // },
       {
-        id: DrawerAction.PUSH,
-        icon: PushIcon(),
-        text: "Push Notification",
+        id: DrawerAction.SMS,
+        icon: WebhookIcon(),
+        text: "Validar Matricula",
+      },
+      {
+        id: DrawerAction.SMS,
+        icon: WebhookIcon(),
+        text: "Validar Saldo",
+      },
+      {
+        id: DrawerAction.SMS,
+        icon: WebhookIcon(),
+        text: "Validar Periodo",
       },
       {
         id: DrawerAction.WEBHOOK,
         icon: WebhookIcon(),
-        text: "Webhook",
+        text: "Verificar Aceite",
       },
-      // {
-      //   id: DrawerAction.CUSTOM_MODAL,
-      //   icon: CustomModalIcon(),
-      //   text: "Custom Modal",
-      // },
       {
         id: DrawerAction.TRACKER,
         icon: CustomModalIcon(),
-        text: "Onboarding",
+        text: "Registrar Ferias",
       },
       {
-        id: DrawerAction.JUMP_TO,
-        icon: JumpToIcon(),
-        text: "Jump To",
+        id: DrawerAction.TRACKER,
+        icon: CustomModalIcon(),
+        text: "Excluir Ferias",
       },
+      {
+        id: DrawerAction.EMAIL,
+        icon: EmailIcon(),
+        text: "Enviar email",
+      },
+      
       {
         id: DrawerAction.EXIT,
         icon: ExitIcon(),
-        text: "Exit",
+        text: "Fim",
       },
     ],
   },
   {
-    groupName: "Timing",
+    groupName: "Tempo",
     children: [
       {
         id: DrawerAction.WAIT_UNTIL,
         icon: WaitUntilIcon(),
-        text: "Wait Until",
-      },
-      {
-        id: DrawerAction.TIME_DELAY,
-        icon: TimeDelayIcon(),
-        text: "Time Delay",
+        text: "Esperar Ate",
       },
       {
         id: DrawerAction.TIME_WINDOW,
         icon: TimeWindowIcon(),
-        text: "Time Window",
+        text: "Janel de Tempo",
       },
     ],
   },
   {
-    groupName: "Condition",
+    groupName: "Condicional",
     children: [
       {
         id: DrawerAction.MULTISPLIT,
-        // TODO: change icon
         icon: UserAttributeIcon(),
-        text: "Multisplit",
+        text: "Condicional",
       },
-      {
-        id: DrawerAction.EXPERIMENT,
-        icon: ExperimentIcon(),
-        text: "Experiment",
-      },
-      // {
-      //   id: DrawerAction.TIME_DELAY,
-      //   icon: TimeDelayIcon(),
-      //   text: "A/B Test",
-      // },
     ],
+  },
+  {
+    groupName: "Paralelo",
+    children: [
+      {
+        id: DrawerAction.MULTISPLIT,
+        icon: UserAttributeIcon(),
+        text: "Paralelo",
+      },
+    ],
+  },
+  {
+    groupName: "Pular",
+    children: [
+      {
+        id: DrawerAction.JUMP_TO,
+        icon: JumpToIcon(),
+        text: "Ir para",
+      }
+    ]
   },
 ];
 

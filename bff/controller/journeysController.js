@@ -6,8 +6,6 @@ const threeBranchJourney = require('../data/three_branch_journey.json')
 
 const JorneyModel = require('../schemas/journeySchema')
 
-const data = [basicOnboarding, displayModal, exampleOnboardingChecklist, generalEmailCampaign, threeBranchJourney]
-
 module.exports = {
   async getListJourneys(_, res) {
     const data = await JorneyModel.find()
@@ -17,15 +15,23 @@ module.exports = {
     })
   },
 
-  visualLayout(_, res) {
-    res.json(exampleOnboardingChecklist)
+  async visualLayout(req, res) {
+    if (!req.body?.id) {
+      res.json({})
+      return
+    }
+
+    const data = await JorneyModel.findOneAndUpdate({ _id: req.body.id }, req.body)
+    res.json({ data })
+
   },
+
   async getJourneyId(req, res) {
     const id = req.params.id
-     
+
     if (req.params.id === "tags") {
       res.json([])
-      return 
+      return
     }
 
     const data = await JorneyModel.findById(id)

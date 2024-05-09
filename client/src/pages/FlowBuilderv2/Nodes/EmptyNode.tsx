@@ -82,7 +82,8 @@ export const EmptyNode: FC<NodeProps<NodeData>> = ({
       />
       {!isDraggedOver && (
         <div>
-          {isTargetForStart ? "Drag a component to start" : "Next step"}
+          {/* {isTargetForStart ? "Proximo passo" : "Next step"} */}
+          Proximo Passo
         </div>
       )}
       <Handle
