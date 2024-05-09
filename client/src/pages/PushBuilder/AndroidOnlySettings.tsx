@@ -1,5 +1,5 @@
-import Input from "components/Elements/Inputv2";
-import Select from "components/Elements/Selectv2";
+import Input from "components/Inputv2";
+import Select from "components/Selectv2";
 import { PlatformSettings, PushClickBehavior } from "./PushBuilderContent";
 import PushBuilderMediaUpload from "./PushBuilderMediaUpload";
 

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import chevronLeftImage from "./svg/chevron-left.svg";
-import chevronRightImage from "./svg/chevron-right.svg";
+import chevronLeftImage from "assets/svg/chevron-left.svg";
+import chevronRightImage from "assets/svg/chevron-right.svg";
 
 interface PaginationProps {
   currentPage: number;

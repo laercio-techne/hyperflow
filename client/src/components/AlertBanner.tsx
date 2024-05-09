@@ -1,12 +1,6 @@
-import React, { FC, ReactNode } from "react";
 import { ExclamationTriangleIcon } from "@heroicons/react/20/solid";
 
-export interface AlertBannerProps {
-  title: string;
-  children?: ReactNode;
-}
-
-const AlertBanner: FC<AlertBannerProps> = ({ title, children }) => {
+const AlertBanner: any = ({ title, children }: any) => {
   return (
     <div className="rounded-md bg-yellow-50 p-4">
       <div className="flex">

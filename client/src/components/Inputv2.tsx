@@ -1,23 +1,13 @@
-import React, { FC, InputHTMLAttributes } from "react";
-import clearInputIconImage from "./svg/clear-input-icon.svg";
+import clearInputIconImage from "assets/svg/clear-input-icon.svg";
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange"> {
-  value: string;
-  onChange: (value: string) => void;
-  showClearButton?: boolean;
-  className?: string;
-  wrapperClassName?: string;
-}
-
-const Input: FC<InputProps> = ({
+const Input: any = ({
   value,
   onChange,
   className,
   wrapperClassName,
   showClearButton,
   ...props
-}) => {
+}: any) => {
   return (
     <div
       className={`w-fit relative ${wrapperClassName ? wrapperClassName : ""}`}

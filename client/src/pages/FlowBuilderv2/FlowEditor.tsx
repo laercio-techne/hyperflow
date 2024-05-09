@@ -35,7 +35,7 @@ import FlowBuilderSidePanel from "./SidePanel/FlowBuilderSidePanel";
 import { BranchEdge, PrimaryEdge } from "./Edges";
 import { FC, useEffect, useRef } from "react";
 import NodeDraggingProvider from "./NodeDraggingProvider";
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import { JumpToNodeData } from "./Nodes/NodeData";
 import { MultisplitNode } from "./Nodes/MultisplitNode";
 import { ExperimentNode } from "./Nodes/ExperimentNode";

@@ -11,7 +11,7 @@ import { useAppDispatch, useAppSelector } from "store/hooks";
 import deepCopy from "utils/deepCopy";
 import Button, {
   ButtonType,
-} from "../../../components/Elements/Buttonv2/Button";
+} from "../../../components/Buttonv2";
 import { NodeType } from "../FlowEditor";
 import FlowBuilderDeleteModal from "../Modals/FlowBuilderDeleteModal";
 import FlowBuilderSaveTrackerModal from "../Modals/FlowBuilderSaveTrackerModal";
@@ -24,7 +24,7 @@ import UserAttributeSettings from "./settings/UserAttributeSettings";
 import WaitUntilSettings from "./settings/WaitUntilSettings";
 import JumpToSettings from "./settings/JumpToSettings";
 import { isEqual } from "lodash";
-import Modal from "components/Elements/Modal";
+import Modal from "components/Modal";
 import { MessageType } from "types/Workflow";
 import { Node } from "reactflow";
 import ExperimentNodeSettings from "./settings/ExperimentNodeSettings";

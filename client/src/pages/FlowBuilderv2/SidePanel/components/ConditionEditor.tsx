@@ -1,7 +1,7 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2/Button";
+import Button, { ButtonType } from "components/Buttonv2";
 import FlowBuilderAutoComplete from "components/AutoCompletev2";
 import DynamicInput from "pages/FlowBuilderv2/Elements/DynamicInput";
-import Select from "components/Elements/Selectv2/Select";
+import Select from "components/Selectv2";
 import {
   Condition,
   ElementKey,

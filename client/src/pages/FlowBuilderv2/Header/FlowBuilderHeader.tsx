@@ -16,7 +16,7 @@ import { EdgeData } from "../Edges/EdgeData";
 import { NodeType } from "../FlowEditor";
 import Button, {
   ButtonType,
-} from "../../../components/Elements/Buttonv2/Button";
+} from "../../../components/Buttonv2";
 import FlowBuilderStartModal from "../Modals/FlowBuilderStartModal";
 import ArrowLeftIcon from "@heroicons/react/24/outline/ArrowLeftIcon";
 import posthog from "posthog-js";

@@ -5,7 +5,7 @@ import Template from "types/Template";
 import { SidePanelComponentProps } from "../FlowBuilderSidePanel";
 import { MessageNodeData } from "pages/FlowBuilderv2/Nodes/NodeData";
 import { MessageType } from "types/Workflow";
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import { useDispatch } from "react-redux";
 import {
   setNodes,
@@ -20,7 +20,7 @@ import {
 } from "pages/PushBuilder/PushBuilderContent";
 import LockScreenIOS from "pages/PushBuilder/Badges/LockScreenIOS";
 import LockScreenAndroid from "pages/PushBuilder/Badges/LockScreenAndroid";
-import Select from "components/Elements/Selectv2";
+import Select from "components/Selectv2";
 import CogIcon from "@heroicons/react/24/outline/CogIcon";
 import { Link } from "react-router-dom";
 

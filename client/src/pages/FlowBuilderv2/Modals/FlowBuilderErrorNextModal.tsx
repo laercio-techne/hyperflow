@@ -1,18 +1,13 @@
 import React, { FC } from "react";
 import Button, {
   ButtonType,
-} from "../../../components/Elements/Buttonv2/Button";
+} from "../../../components/Buttonv2";
 import FlowBuilderModal from "../Elements/FlowBuilderModal";
 
-interface FlowBuilderErrorNextModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const FlowBuilderErrorNextModal: FC<FlowBuilderErrorNextModalProps> = ({
+const FlowBuilderErrorNextModal: any = ({
   isOpen,
   onClose,
-}) => {
+}: any) => {
   return (
     <FlowBuilderModal isOpen={isOpen} onClose={onClose}>
       <div className="font-roboto">

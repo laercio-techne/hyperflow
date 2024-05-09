@@ -1,16 +1,9 @@
-import { TrashIcon } from "@heroicons/react/24/outline";
-import { GenericButton } from "components/Elements";
-import React, { FC, ReactNode } from "react";
+import GenericButton from "components/GenericButton";
 
-interface RemoveComponentButtonProps {
-  children: string;
-  onClick: () => void;
-}
-
-const RemoveComponentButton: FC<RemoveComponentButtonProps> = ({
+const RemoveComponentButton: any = ({
   children,
   onClick,
-}) => {
+}: any) => {
   return (
     <GenericButton
       onClick={onClick}
@@ -20,7 +13,7 @@ const RemoveComponentButton: FC<RemoveComponentButtonProps> = ({
         <span className="whitespace-nowrap !text-[#EB5757] underline">
           {children
             .split(" ")
-            .map((word) => {
+            .map((word: any) => {
               const arr = word.split("");
               arr[0] = arr[0].toUpperCase();
               return arr.join("");

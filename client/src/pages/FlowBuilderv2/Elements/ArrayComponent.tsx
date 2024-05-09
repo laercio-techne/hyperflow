@@ -1,8 +1,8 @@
 import { FC, useEffect, useMemo, useState } from "react";
 import { StatementValueType } from "reducers/flow-builder.reducer";
 import DynamicInput, { ValueChanger } from "./DynamicInput";
-import Modal from "components/Elements/Modalv2";
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Modal from "components/Modalv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import TrashIcon from "assets/icons/TrashIcon";
 import { generateAttributeView } from "pages/Personv2/Personv2";
 

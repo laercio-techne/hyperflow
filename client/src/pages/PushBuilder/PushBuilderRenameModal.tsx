@@ -1,4 +1,4 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import FlowBuilderInput from "pages/FlowBuilderv2/Elements/FlowBuilderInput";
 import FlowBuilderModal from "pages/FlowBuilderv2/Elements/FlowBuilderModal";
 import React, { FC, useEffect, useState } from "react";

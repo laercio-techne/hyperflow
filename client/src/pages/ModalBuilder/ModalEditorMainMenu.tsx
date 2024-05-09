@@ -1,13 +1,6 @@
-import { GenericButton } from "components/Elements";
-import PositionSVG from "@heroicons/react/20/solid/ArrowsPointingOutIcon";
-import CanvasSVG from "@heroicons/react/20/solid/ComputerDesktopIcon";
-import TitleSVG from "@heroicons/react/20/solid/Bars3BottomLeftIcon";
-import BodySVG from "@heroicons/react/20/solid/Bars4Icon";
-import MediaSVG from "@heroicons/react/20/solid/VideoCameraIcon";
-import DismissSVG from "@heroicons/react/20/solid/XCircleIcon";
+import GenericButton from "components/GenericButton";
 import EditIconSVG from "@heroicons/react/20/solid/EllipsisHorizontalIcon";
-import PrimarySVG from "@heroicons/react/20/solid/CheckCircleIcon";
-import ShroudSVG from "@heroicons/react/20/solid/SunIcon";
+
 import { FC } from "react";
 import { ModalState } from "./types";
 

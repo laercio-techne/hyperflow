@@ -1,7 +1,7 @@
 import { AxiosError } from "axios";
-import Button, { ButtonType } from "components/Elements/Buttonv2";
-import Input from "components/Elements/Inputv2";
-import Modal from "components/Elements/Modalv2";
+import Button, { ButtonType } from "components/Buttonv2";
+import Input from "components/Inputv2";
+import Modal from "components/Modalv2";
 import Progress from "components/Progress";
 import React, { FC, useState } from "react";
 import { useNavigate } from "react-router-dom";

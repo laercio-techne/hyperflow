@@ -2,8 +2,8 @@ import React from "react";
 import CheckBox from "components/Checkbox";
 import PlatformSettingsComponents from "./PlatformSettingsComponents";
 import AndroidOnlySettings from "./AndroidOnlySettings";
-import Button, { ButtonType } from "components/Elements/Buttonv2";
-import Input from "components/Elements/Inputv2";
+import Button, { ButtonType } from "components/Buttonv2";
+import Input from "components/Inputv2";
 import TrashIcon from "assets/icons/TrashIcon";
 import PushBuilderPreviewer from "./PushBuilderPreviewer";
 

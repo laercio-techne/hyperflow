@@ -1,4 +1,4 @@
-import Select from "components/Elements/Selectv2";
+import Select from "components/Selectv2";
 import { isAfter, isBefore } from "date-fns";
 import {
   TimeWindowNodeData,

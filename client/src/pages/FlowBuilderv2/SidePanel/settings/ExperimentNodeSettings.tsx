@@ -1,4 +1,4 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import {
   BranchType,
   ExperimentBranch,
@@ -6,7 +6,7 @@ import {
 } from "pages/FlowBuilderv2/Nodes/NodeData";
 import React, { FC, useEffect, useState } from "react";
 import { SidePanelComponentProps } from "../FlowBuilderSidePanel";
-import Input from "components/Elements/Inputv2";
+import Input from "components/Inputv2";
 import ReactSlider from "react-slider";
 import { v4 as uuid } from "uuid";
 

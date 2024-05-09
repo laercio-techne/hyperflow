@@ -1,7 +1,7 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2";
-import Input from "components/Elements/Inputv2";
-import Modal from "components/Elements/Modalv2";
-import Select from "components/Elements/Selectv2";
+import Button, { ButtonType } from "components/Buttonv2";
+import Input from "components/Inputv2";
+import Modal from "components/Modalv2";
+import Select from "components/Selectv2";
 import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
 import { StatementValueType } from "reducers/flow-builder.reducer";
 import { ArrayComponent } from "./ArrayComponent";

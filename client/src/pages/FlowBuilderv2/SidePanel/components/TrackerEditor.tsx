@@ -1,4 +1,4 @@
-import Select from "components/Elements/Selectv2";
+import Select from "components/Selectv2";
 import { NodeType } from "pages/FlowBuilderv2/FlowEditor";
 import { TrackerNodeData } from "pages/FlowBuilderv2/Nodes/NodeData";
 import React, { FC, useEffect, useState } from "react";

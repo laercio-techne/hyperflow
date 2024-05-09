@@ -1,4 +1,4 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import React, { useState } from "react";
 import { useAppSelector } from "store/hooks";
 import PushBuilderRenameModal from "./PushBuilderRenameModal";

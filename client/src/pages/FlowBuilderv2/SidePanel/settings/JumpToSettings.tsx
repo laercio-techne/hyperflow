@@ -1,7 +1,7 @@
 import { JumpToNodeData } from "pages/FlowBuilderv2/Nodes/NodeData";
 import React, { FC } from "react";
 import { SidePanelComponentProps } from "../FlowBuilderSidePanel";
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { setJumpToTargettingNode } from "reducers/flow-builder.reducer";
 import { NodeType } from "pages/FlowBuilderv2/FlowEditor";

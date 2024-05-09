@@ -1,5 +1,5 @@
 import { Combobox } from "@headlessui/react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDebounce } from "react-use";
 
 interface ItemsSetter<T> {

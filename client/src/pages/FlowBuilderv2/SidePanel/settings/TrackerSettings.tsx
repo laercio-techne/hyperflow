@@ -1,4 +1,4 @@
-import Select from "components/Elements/Selectv2";
+import Select from "components/Selectv2";
 import DynamicInput from "pages/FlowBuilderv2/Elements/DynamicInput";
 import { NodeType } from "pages/FlowBuilderv2/FlowEditor";
 import {

@@ -9,7 +9,7 @@ import React, { FC } from "react";
 import { SidePanelComponentProps } from "../FlowBuilderSidePanel";
 import { v4 as uuid } from "uuid";
 import AttributeBranchEditor from "../components/AttributeBranchEditor";
-import Button, { ButtonType } from "components/Elements/Buttonv2/Button";
+import Button, { ButtonType } from "components/Buttonv2";
 
 const UserAttributeSettings: FC<
   SidePanelComponentProps<UserAttributeNodeData>

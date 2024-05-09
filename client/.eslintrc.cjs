@@ -8,22 +8,22 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: [
+    'react-refresh',
+    'module-resolver',
+    {
+        root: ["./src"],
+        alias: {
+            "$utility": './src/utility',
+            "$themes": './src/themes',
+            "$assets": './src/assets',
+        },
+    },
+  ],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
-    ],
-    "import-alias/import-alias": [
-      "error",
-      {
-        "relativeDepth": 0,
-        "aliases": [
-          { "alias": "store", "matcher": "^src/store" }, // src/modules/app/test -> @src/modules/app/test
-          { "alias": "@test", "matcher": "^test\/unit" }, // test/unit/modules/app -> @test/modules/app
-          { "alias": "@testRoot", "matcher": "^(test)\/e2e" } // test/e2e/modules/app -> @testRoot/e2e/modules/app
-        ]
-      }
     ]
-  },
+  }
 }

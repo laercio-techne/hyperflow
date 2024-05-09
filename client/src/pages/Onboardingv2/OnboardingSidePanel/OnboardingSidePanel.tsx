@@ -14,7 +14,7 @@ import { useAppDispatch, useAppSelector } from "store/hooks";
 import deepCopy from "utils/deepCopy";
 import Button, {
   ButtonType,
-} from "components/Elements/Buttonv2/Button";
+} from "components/Buttonv2";
 import MessageSettings from "./settings/MessageSettings";
 
 export interface SidePanelComponentProps<T extends NodeData = NodeData> {

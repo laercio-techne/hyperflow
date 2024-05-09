@@ -1,9 +1,10 @@
 import { ChangeEvent, useState } from "react";
 import { Grid, FormControl } from "@mui/material";
-import { GenericButton, Input } from "components/Elements";
+import GenericButton from "components/GenericButton";
+import Inputfrom from "components/Inputfrom";
 import { useNavigate } from "react-router-dom";
 import { TemplateType } from "types/Template";
-import Select from "components/Elements/Selectv2";
+import Select from "components/Selectv2";
 import { ApiConfig } from "../../../constants";
 import ApiService from "services/api.service";
 import { defaultModalState } from "pages/ModalBuilder/ModalBuilder";

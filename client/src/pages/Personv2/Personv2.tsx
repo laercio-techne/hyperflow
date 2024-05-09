@@ -1,4 +1,4 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import React, {
   Fragment,
   ReactNode,
@@ -9,7 +9,7 @@ import React, {
 import { useParams } from "react-router-dom";
 import ApiService from "services/api.service";
 import UserIcon from "./icons/UserIcon";
-import Input from "components/Elements/Inputv2";
+import Input from "components/Inputv2";
 import TrashIcon from "../../assets/icons/TrashIcon";
 import Progress from "components/Progress";
 import { AxiosError } from "axios";
@@ -23,7 +23,7 @@ import { format } from "date-fns";
 import { capitalize } from "lodash";
 import { ChevronDoubleDownIcon } from "@heroicons/react/20/solid";
 import { Attribute } from "pages/PeopleSettings/PeopleSettings";
-import Select from "components/Elements/Selectv2";
+import Select from "components/Selectv2";
 import { StatementValueType } from "reducers/flow-builder.reducer";
 import DynamicInput from "pages/FlowBuilderv2/Elements/DynamicInput";
 import { Segment, SegmentType } from "types/Segment";

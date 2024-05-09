@@ -1,5 +1,5 @@
 import { AxiosError } from "axios";
-import Button, { ButtonType } from "components/Elements/Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import ApiService from "services/api.service";

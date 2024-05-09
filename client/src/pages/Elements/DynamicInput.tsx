@@ -1,23 +1,14 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2";
-import Input from "components/Elements/Inputv2";
-import Modal from "components/Elements/Modalv2";
-import Select from "components/Elements/Selectv2";
-import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
+import Input from "components/Inputv2";
+import Select from "components/Selectv2";
+import { ReactNode, useEffect, useState } from "react";
 import { StatementValueType } from "reducers/flow-builder.reducer";
 import { ArrayComponent } from "./ArrayComponent";
 
-export interface ValueChanger {
-  value: any;
-  placeholder?: string;
-  onChange: (value: any) => void;
-  dataTestId?: string;
-}
-
-const BooleanComponent: FC<ValueChanger> = ({
+const BooleanComponent: any = ({
   value,
   onChange,
   dataTestId,
-}) => {
+}: any) => {
   return (
     <Select
       placeholder="value"
@@ -42,9 +33,7 @@ export enum DateRelativePoint {
   AGO = "ago",
 }
 
-export const DateComponent: FC<
-  ValueChanger & { isRelativeDate?: boolean; onlyDate?: boolean }
-> = ({ value, onChange, isRelativeDate, onlyDate, dataTestId }) => {
+export const DateComponent: any = ({ value, onChange, isRelativeDate, onlyDate, dataTestId }: any) => {
   const [relativeCount, setRelativeCount] = useState(0);
   const [relativeUnit, setRelativeUnit] = useState<DateRelativeUnit>(
     DateRelativeUnit.DAYS
@@ -108,7 +97,7 @@ export const DateComponent: FC<
     <div className="flex gap-2.5">
       <Input
         value={String(relativeCount)}
-        onChange={(numString) => {
+        onChange={(numString: any) => {
           const num = +numString;
           if (isNaN(num) || num < 0) return;
 
@@ -119,7 +108,7 @@ export const DateComponent: FC<
       />
       <Select
         value={relativeUnit}
-        onChange={(relativeUn) => setRelativeUnit(relativeUn)}
+        onChange={(relativeUn: any) => setRelativeUnit(relativeUn)}
         options={Object.values(DateRelativeUnit).map((relativeUn) => ({
           key: relativeUn,
           title: relativeUn,
@@ -128,7 +117,7 @@ export const DateComponent: FC<
       />
       <Select
         value={relativePoint}
-        onChange={(val) => setRelativePoint(val)}
+        onChange={(val: any) => setRelativePoint(val)}
         options={[
           { key: DateRelativePoint.FROM_NOW, title: "from now" },
           { key: DateRelativePoint.AGO, title: "ago" },
@@ -139,7 +128,7 @@ export const DateComponent: FC<
   );
 };
 
-const EmailComponent: FC<ValueChanger> = ({ value, onChange, dataTestId }) => {
+const EmailComponent: any = ({ value, onChange, dataTestId }: any) => {
   return (
     <input
       type="text"
@@ -152,7 +141,7 @@ const EmailComponent: FC<ValueChanger> = ({ value, onChange, dataTestId }) => {
   );
 };
 
-const NumberComponent: FC<ValueChanger> = ({ value, onChange, dataTestId }) => {
+const NumberComponent: any = ({ value, onChange, dataTestId }: any) => {
   return (
     <input
       type="number"
@@ -165,12 +154,12 @@ const NumberComponent: FC<ValueChanger> = ({ value, onChange, dataTestId }) => {
   );
 };
 
-const StringComponent: FC<ValueChanger> = ({
+const StringComponent: any = ({
   value,
   placeholder = "",
   onChange,
   dataTestId,
-}) => {
+}: any) => {
   return (
     <input
       type="text"
@@ -183,15 +172,7 @@ const StringComponent: FC<ValueChanger> = ({
   );
 };
 
-interface DynamicInputProps extends ValueChanger {
-  type: StatementValueType;
-  isArray?: boolean;
-  isRelativeDate?: boolean;
-  dateFormat?: string;
-  dataTestId?: string;
-}
-
-const DynamicInput: FC<DynamicInputProps> = ({
+const DynamicInput: any = ({
   type,
   isArray,
   value,
@@ -200,7 +181,7 @@ const DynamicInput: FC<DynamicInputProps> = ({
   isRelativeDate,
   dateFormat,
   dataTestId,
-}) => {
+}: any) => {
   const [isFirstRender, setIsFirstRender] = useState(true);
 
   const defaultValuesMap: Record<StatementValueType, string> = {

@@ -1,5 +1,5 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2";
-import Select from "components/Elements/Selectv2";
+import Button, { ButtonType } from "components/Buttonv2";
+import Select from "components/Selectv2";
 import { useEffect, useState } from "react";
 import { PushBuilderData, PushPlatforms } from "./PushBuilderContent";
 import IOS_BG from "./assets/images/iosbg.jpg";

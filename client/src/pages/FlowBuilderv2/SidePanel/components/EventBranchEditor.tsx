@@ -1,5 +1,5 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2/Button";
-import Select from "components/Elements/Selectv2";
+import Button, { ButtonType } from "components/Buttonv2";
+import Select from "components/Selectv2";
 import {
   BranchType,
   Condition,

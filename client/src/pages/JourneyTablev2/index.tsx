@@ -1,6 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
-import Button, { ButtonType } from "components/Elements/Buttonv2";
-import Input from "components/Elements/Inputv2";
+import Button, { ButtonType } from "components/Buttonv2";
+import Input from "components/Inputv2";
 import Table from "components/Table";
 import { format } from "date-fns";
 import React, { Fragment, useEffect, useState } from "react";

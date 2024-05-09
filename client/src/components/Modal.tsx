@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { FC, Fragment, KeyboardEvent } from "react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
-import Button, { ButtonType } from "../Buttonv2";
+import Button, { ButtonType } from "components/Buttonv2";
 
 export interface ModalProps {
   isOpen: boolean;

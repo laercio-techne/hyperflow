@@ -17,11 +17,11 @@ import EventBranchEditor from "../components/EventBranchEditor";
 import { SidePanelComponentProps } from "../FlowBuilderSidePanel";
 import { v4 as uuid } from "uuid";
 import MaxTimeBranchEditor from "../components/MaxTimeBranchEditor";
-import Button, { ButtonType } from "components/Elements/Buttonv2/Button";
+import Button, { ButtonType } from "components/Buttonv2";
 import { toast } from "react-toastify";
 import deepCopy from "utils/deepCopy";
 import { useAppSelector } from "store/hooks";
-import Select from "components/Elements/Selectv2";
+import Select from "components/Selectv2";
 import { StatementValueType } from "reducers/flow-builder.reducer";
 
 const branchNaming = {

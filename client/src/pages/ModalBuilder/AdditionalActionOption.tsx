@@ -1,5 +1,4 @@
-import { GenericButton } from "components/Elements";
-import EditIconSVG from "@heroicons/react/20/solid/EllipsisHorizontalIcon";
+import GenericButton from "components/GenericButton";
 import { EditorMenuOptions } from "./ModalEditorMainMenu";
 import { AdditionalClickOptions, SubMenuOptions } from "./types";
 import { useEffect, useState } from "react";

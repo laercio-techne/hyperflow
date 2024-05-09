@@ -1,4 +1,4 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2/Button";
+import Button, { ButtonType } from "components/Buttonv2";
 import {
   AttributeBranch,
   AttributeCondition,

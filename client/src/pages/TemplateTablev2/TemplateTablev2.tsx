@@ -1,5 +1,5 @@
-import Button, { ButtonType } from "components/Elements/Buttonv2";
-import Input from "components/Elements/Inputv2";
+import Button, { ButtonType } from "components/Buttonv2";
+import Input from "components/Inputv2";
 import searchIconImage from "./svg/search-icon.svg";
 import threeDotsIconImage from "./svg/three-dots-icon.svg";
 import emptyDataImage from "./svg/empty-data.svg";

@@ -6,7 +6,7 @@ import ApiService from "services/api.service";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import Button, {
   ButtonType,
-} from "../../../components/Elements/Buttonv2/Button";
+} from "../../../components/Buttonv2";
 import FlowBuilderModal from "../Elements/FlowBuilderModal";
 import posthog from "posthog-js";
 

@@ -3,7 +3,7 @@ import { setFlowName } from "reducers/flow-builder.reducer";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import Button, {
   ButtonType,
-} from "../../../components/Elements/Buttonv2/Button";
+} from "../../../components/Buttonv2";
 import FlowBuilderInput from "../Elements/FlowBuilderInput";
 import FlowBuilderModal from "../Elements/FlowBuilderModal";
 

@@ -2,8 +2,7 @@ import { EditorMenuOptions } from "./ModalEditorMainMenu";
 import LinkSVG from "@heroicons/react/20/solid/ArrowTopRightOnSquareIcon";
 import NoSymbolIcon from "@heroicons/react/20/solid/NoSymbolIcon";
 import { AdditionalClickOptions, ModalState, SubMenuOptions } from "./types";
-import { GenericButton } from "components/Elements";
-import EditIconSVG from "@heroicons/react/20/solid/EllipsisHorizontalIcon";
+import GenericButton from "components/GenericButton";
 import { IAdditionalActionData } from "./ModalEditor";
 
 interface IModalEditorAdditionalClicksProps {
