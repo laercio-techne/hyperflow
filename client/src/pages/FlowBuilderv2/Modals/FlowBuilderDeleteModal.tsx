@@ -10,17 +10,11 @@ import Button, {
 import FlowBuilderModal from "../Elements/FlowBuilderModal";
 import { NodeData } from "../Nodes/NodeData";
 
-interface FlowBuilderDeleteModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  selectedNode: Node<NodeData>;
-}
-
-const FlowBuilderDeleteModal: FC<FlowBuilderDeleteModalProps> = ({
+const FlowBuilderDeleteModal: any = ({
   isOpen,
   onClose,
   selectedNode,
-}) => {
+}: any) => {
   const dispatch = useAppDispatch();
 
   const handleNodeDeletion = async () => {
@@ -68,18 +62,18 @@ const FlowBuilderDeleteModal: FC<FlowBuilderDeleteModalProps> = ({
           </div>
 
           <div className="flex flex-col gap-2">
-            <div className="font-medium text-base">Are you sure delete it?</div>
+            <div className="font-medium text-base">Realmente gostaria de apagar este passo?</div>
             <div className="font-normal text-[14px] leading-[22px]">
-              This action cannot be undone.
+              Esta ação nao poderá ser desfeita.
             </div>
           </div>
         </div>
         <div className="flex justify-end items-center mt-[24px] gap-2">
           <Button type={ButtonType.SECONDARY} onClick={onClose}>
-            No
+            Não
           </Button>
           <Button type={ButtonType.PRIMARY} onClick={handleNodeDeletion}>
-            Yes
+            Sim
           </Button>
         </div>
       </div>

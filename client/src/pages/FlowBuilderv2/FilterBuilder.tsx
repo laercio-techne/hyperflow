@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useId, useRef, useState } from "react";
+import React, { FC, useEffect, useId, useState } from "react";
 import { useDebounce } from "react-use";
 import {
   addSegmentQueryError,
@@ -35,14 +35,14 @@ import { useAppSelector } from "store/hooks";
 import { Segment } from "types/Segment";
 import Button, {
   ButtonType,
-} from "components/Elements/Buttonv2/Button";
+} from "components/Buttonv2";
 import FlowBuilderAutoComplete from "components/AutoCompletev2";
 import FilterBuilderDynamicInput from "pages/FlowBuilderv2/Elements/DynamicInput";
 import { isBefore } from "date-fns";
 import { useDispatch } from "react-redux";
 import { SegmentsSettings } from "reducers/segment.reducer";
 import { capitalize } from "lodash";
-import Select from "components/Elements/Selectv2";
+import Select from "components/Selectv2";
 import { Workflow } from "types/Workflow";
 import axios, { CancelTokenSource } from "axios";
 import deepCopy from "utils/deepCopy";

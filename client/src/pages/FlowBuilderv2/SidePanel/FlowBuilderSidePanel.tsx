@@ -72,19 +72,19 @@ const FlowBuilderSidePanel: any = ({ className }: any) => {
   const [showErrors, setShowErrors] = useState(false);
 
   const nodeTypeToNameMap: Record<NodeType, string> = {
-    [NodeType.START]: "Start",
-    [NodeType.EMPTY]: "Empty",
-    [NodeType.MESSAGE]: "Message",
-    [NodeType.JUMP_TO]: "Jump to",
-    [NodeType.EXIT]: "Exit",
+    [NodeType.START]: "Inicio",
+    [NodeType.EMPTY]: "Vazio",
+    [NodeType.MESSAGE]: "Mensage",
+    [NodeType.JUMP_TO]: "Ir para",
+    [NodeType.EXIT]: "Fim",
     [NodeType.TIME_DELAY]: "Time delay",
     [NodeType.TIME_WINDOW]: "Time window",
-    [NodeType.WAIT_UNTIL]: "Wait until",
+    [NodeType.WAIT_UNTIL]: "Espere ate",
     [NodeType.USER_ATTRIBUTE]: "User attribute",
     [NodeType.INSERT_NODE]: "Insert",
     [NodeType.TRACKER]: "Custom component",
-    [NodeType.MULTISPLIT]: "Multisplit",
-    [NodeType.EXPERIMENT]: "Experiment",
+    [NodeType.MULTISPLIT]: "Condicao",
+    [NodeType.EXPERIMENT]: "Paralelo",
     [NodeType.PUSH]: "Push",
   };
 
@@ -291,7 +291,7 @@ const FlowBuilderSidePanel: any = ({ className }: any) => {
   }, [nodeData]);
 
   useEffect(() => {
-    setSelectedNode(nodes.find((node) => node.selected));
+    setSelectedNode(nodes.find((node: any) => node.selected));
   }, [nodes]);
 
   const isOpen =
