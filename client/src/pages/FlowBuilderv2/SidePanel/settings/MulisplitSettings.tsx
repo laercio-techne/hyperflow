@@ -46,12 +46,8 @@ export const limitQuery = (
   return [limitedQuery, count];
 };
 
-const MulisplitSettings: FC<
-  SidePanelComponentProps<MultisplitNodeData> & { isViewMode?: boolean }
-> = ({ nodeData, setNodeData, setIsError, showErrors, isViewMode }) => {
-  const [editBranchIndex, setEditBranchIndex] = useState<number | undefined>(
-    undefined
-  );
+const MulisplitSettings = ({ nodeData, setNodeData, setIsError, showErrors, isViewMode }: any) => {
+  const [editBranchIndex, setEditBranchIndex] = useState(undefined);
 
   const handleSave = (branch: ConditionalSegmentsSettings) => {
     if (editBranchIndex === undefined) return;
@@ -134,12 +130,10 @@ const MulisplitSettings: FC<
         <div className="py-5 relative">
           <Button
             type={ButtonType.SECONDARY}
-            onClick={() => {
-              setEditBranchIndex(-1);
-            }}
+            onClick={() => setEditBranchIndex(-1)}
             className="!text-[#111827] !border-[#E5E7EB]"
           >
-            Add branch
+            Adicionar Regra
           </Button>
         </div>
       )}

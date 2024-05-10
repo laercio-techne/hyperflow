@@ -1,5 +1,5 @@
 module.exports = {
   getTemplate(req, res) {
-    res.json({})
+    res.json({ data: []})
   }
 }

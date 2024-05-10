@@ -1,18 +1,17 @@
-import React, { FC, useEffect } from "react";
-import { Handle, NodeProps, Position } from "reactflow";
+import { useEffect } from "react";
+import { Handle, Position } from "reactflow";
 import { changeNodeData } from "reducers/flow-builder.reducer";
 import { useAppDispatch } from "store/hooks";
 import JumpToLine from "../Edges/components/JumpToLine";
 import { NodeType } from "../FlowEditor";
-import { JumpToNodeData } from "./NodeData";
 import { NodeDevModeHighlighter } from "./NodeDevModeHighlighter";
 
-export const JumpToNode: FC<NodeProps<JumpToNodeData>> = ({
+export const JumpToNode: any = ({
   isConnectable,
   selected,
   data,
   id,
-}) => {
+}: any) => {
   const dispatch = useAppDispatch();
 
   const setTargetId = (targetId?: string) => {
@@ -76,7 +75,7 @@ export const JumpToNode: FC<NodeProps<JumpToNodeData>> = ({
               </defs>
             </svg>
           </div>
-          <div className={`font-inter font-semibold text-base`}>Jump to</div>
+          <div className={`font-inter font-semibold text-base`}>Ir para</div>
         </div>
 
         <JumpToLine

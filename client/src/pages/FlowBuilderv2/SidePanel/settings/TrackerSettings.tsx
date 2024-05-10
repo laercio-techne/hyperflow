@@ -36,7 +36,7 @@ const TrackerSettings: FC<SidePanelComponentProps<TrackerNodeData>> = ({
     });
 
     setTrackerTemplates(
-      data.map((template) => ({
+      data?.map((template) => ({
         id: template.id,
         name: template.name,
         fields: (template.customFields?.fields || []) as TrackerField[],

@@ -37,7 +37,7 @@ export const MultisplitNode: FC<NodeProps<MultisplitNodeData>> = ({
 
       <div className="p-[16px]">
         <div className="flex justify-between font-semibold text-base mb-[2px]">
-          <div>Multisplit</div>
+          <div>Validador</div>
           {/* {isViewMode && (
             <div className="h-fit px-1 py-[2px] flex items-center gap-[4px] bg-[#F3F4F6] rounded-sm">
               <UserIcon />
@@ -53,7 +53,7 @@ export const MultisplitNode: FC<NodeProps<MultisplitNodeData>> = ({
               Set conditions
             </span>
           ) : (
-            "Meet below conditions"
+            "Verificacoes Validas?"
           )}
         </div>
       </div>

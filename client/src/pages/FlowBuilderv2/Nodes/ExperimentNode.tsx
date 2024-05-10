@@ -1,22 +1,18 @@
-import React, { FC, useMemo } from "react";
-import { Handle, Node, NodeProps, Position } from "reactflow";
+import { useMemo } from "react";
+import { Handle, Position } from "reactflow";
 import { useAppSelector } from "store/hooks";
-import BranchPopover from "../Edges/components/BranchPopover";
-import { WaitUntilIcon } from "../Icons";
-import { ExperimentNodeData } from "./NodeData";
 import { NodeDevModeHighlighter } from "./NodeDevModeHighlighter";
 
-export const ExperimentNode: FC<NodeProps<ExperimentNodeData>> = ({
+export const ExperimentNode: any = ({
   isConnectable,
   selected,
-  data: { branches, disabled, customersCount },
+  data: { disabled },
   id,
-}) => {
-  const { nodes, isOnboardingWaitUntilTooltipVisible, isViewMode } =
-    useAppSelector((state) => state.flowBuilder);
+}: any) => {
+  const { nodes } = useAppSelector((state) => state.flowBuilder);
 
   const thisNode = useMemo(
-    () => nodes.find((node) => node.id === id) as Node<ExperimentNodeData>,
+    () => nodes.find((node: any) => node.id === id),
     [nodes, id]
   );
 
@@ -52,16 +48,8 @@ export const ExperimentNode: FC<NodeProps<ExperimentNodeData>> = ({
                 strokeLinejoin="round"
               />
             </svg>
-            <span>Experiment</span>
+            <span>Validação Paralela</span>
           </div>
-          {/* {isViewMode && (
-            <div className="h-fit px-1 py-[2px] flex items-center gap-[4px] bg-[#F3F4F6] rounded-sm">
-              <UserIcon />
-              <div className="text-[10px] leading-normal">
-                {compatNumberFormatter.format(customersCount || 0)}
-              </div>
-            </div>
-          )} */}
         </div>
         <div className="font-normal text-[14px] leading-[22px] text-[#4B5563]">
           <span
@@ -69,7 +57,7 @@ export const ExperimentNode: FC<NodeProps<ExperimentNodeData>> = ({
               thisNode?.data?.branches?.length < 2 ? "text-[#F43F5E]" : ""
             }  leading-5`}
           >
-            Set the experiment
+            Inclua as validações
           </span>
         </div>
       </div>

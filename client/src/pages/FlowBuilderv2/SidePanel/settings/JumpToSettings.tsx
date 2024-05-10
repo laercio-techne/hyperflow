@@ -33,7 +33,7 @@ const JumpToSettings: FC<
 
   return (
     <div className="flex justify-between gap-[10px] font-inter text-[14px] font-normal leading-[22px] text-[#111827]">
-      <div>Jump to</div>
+      <div>Ir Para</div>
       <div className="max-w-[200px] w-full flex flex-col gap-[10px]">
         {targetNode && (
           <div className="px-[12px] py-[4px] border border-[#E5E7EB] bg-[#F3F4F6] font-roboto">

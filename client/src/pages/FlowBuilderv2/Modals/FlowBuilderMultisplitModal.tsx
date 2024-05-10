@@ -11,15 +11,6 @@ const FilterBuilder = React.lazy(
   () => import("../FilterBuilder")
 );
 
-interface FlowBuilderMultisplitModalProps {
-  isOpen: boolean;
-  branch?: ConditionalSegmentsSettings;
-  index?: number;
-  onClose: () => void;
-  onSave: (branch: ConditionalSegmentsSettings) => void;
-  isViewMode?: boolean;
-}
-
 const defaultObject = {
   type: SegmentsSettingsType.CONDITIONAL,
   query: {
@@ -35,7 +26,7 @@ const FlowBuilderMultisplitModal = ({
   onClose,
   onSave,
   isViewMode,
-}: FlowBuilderMultisplitModalProps) => {
+}: any) => {
   const [bufferBranch, setBufferBranch] = useState(
     deepCopy(branch) || defaultObject
   );
@@ -47,13 +38,10 @@ const FlowBuilderMultisplitModal = ({
   };
 
   const handleSave = () => {
-    console.log("in handle save");
     if (Object.keys(errors).length) {
       setShowErrors(true);
       return;
     }
-    console.log("the segment data is", JSON.stringify(bufferBranch, null, 2));
-
     onSave(bufferBranch);
   };
 

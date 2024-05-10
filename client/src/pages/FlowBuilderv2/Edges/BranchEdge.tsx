@@ -41,7 +41,7 @@ export const BranchEdge: FC<EdgeProps<BranchEdgeData>> = ({
     targetPosition,
   });
 
-  const sourceNode = nodes.find((node) => node.id === source);
+  const sourceNode = nodes.find((node: any) => node.id === source);
 
   if (
     !sourceNode ||
@@ -120,7 +120,7 @@ export const BranchEdge: FC<EdgeProps<BranchEdgeData>> = ({
 
                 {!(branch as MultisplitBranch)?.isOthers && (
                   <span className="font-semibold">
-                    <span>Branch {branchIndex + 1}: </span>
+                    {/* <span>Branch {branchIndex + 1}: </span> */}
                   </span>
                 )}
                 {branch.type === BranchType.EVENT ||
@@ -133,20 +133,20 @@ export const BranchEdge: FC<EdgeProps<BranchEdgeData>> = ({
                 ) : branch.type === BranchType.ATTRIBUTE ? (
                   branch.attributeConditions.length === 0 ? (
                     <span className="text-[#E11D48]">Has no conditions</span>
-                  ) : (
-                    `Meet ${branch.attributeConditions.length} conditions`
+                  ) : ( "Verdadeiro"
+                    // `Meet ${branch.attributeConditions.length} conditions`
                   )
                 ) : branch.type === BranchType.MULTISPLIT ? (
                   branch.isOthers ? (
-                    "All others"
+                    "Falso"
                   ) : branch.conditions?.query.statements.length === 0 ||
                     branch.conditions === undefined ? (
-                    <span className="text-[#E11D48]">Has no conditions</span>
-                  ) : (
-                    `Meet ${branch.conditions.query.statements.length} conditions`
+                    <span className="text-[#E11D48] text-center">Has no conditions</span>
+                  ) : ( "Verdadeiro"
+                    // `Meet ${branch.conditions.query.statements.length} conditions`
                   )
-                ) : branch.type === BranchType.EXPERIMENT ? (
-                  <>{(branch.ratio * 100).toFixed()} %</>
+                ) : branch.type === BranchType.EXPERIMENT ? (<></>
+                  // <>{(branch.ratio * 100).toFixed()} %</>
                 ) : (
                   <>Wait max time</>
                 )}

@@ -10,12 +10,12 @@ import { useDebounce } from "react-use";
 import ApiService from "services/api.service";
 import { Workflow } from "types/Workflow";
 import NameJourneyModal from "./Modals/NameJourneyModal";
-import searchIconImage from "./svg/search-icon.svg";
-import threeDotsIcon from "./svg/three-dots-icon.svg";
-import emptyDataImage from "./svg/empty-data.svg";
-import sortAscChevronsImage from "./svg/sort-asc-chevrons.svg";
-import sortDescChevronsImage from "./svg/sort-desc-chevrons.svg";
-import sortNoneChevronsImage from "./svg/sort-none-chevrons.svg";
+import searchIconImage from "assets/svg/search-icon.svg";
+import threeDotsIcon from "assets/svg/three-dots-icon.svg";
+import emptyDataImage from "assets/svg/empty-data.svg";
+import sortAscChevronsImage from "assets/svg/sort-asc-chevrons.svg";
+import sortDescChevronsImage from "assets/svg/sort-desc-chevrons.svg";
+import sortNoneChevronsImage from "assets/svg/sort-none-chevrons.svg";
 import Pagination from "components/Pagination";
 import DeleteJourneyModal from "./Modals/DeleteJourneyModal";
 

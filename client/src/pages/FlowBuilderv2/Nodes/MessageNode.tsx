@@ -15,41 +15,30 @@ import { NodeDevModeHighlighter } from "./NodeDevModeHighlighter";
 
 const compaсtNumberFormatter = Intl.NumberFormat("en", { notation: "compact" });
 
-export const messageFixtures: Record<
-  MessageType,
-  {
-    icon: ReactNode;
-    text: string;
-    statsToShow?: {
-      key: keyof Stats;
-      name: string;
-      renderLabel: (value: number) => string;
-    }[];
-  }
-> = {
+export const messageFixtures: any = {
   [MessageType.EMAIL]: {
     icon: <EmailIcon />,
-    text: "Email",
+    text: "Enviar Email",
     statsToShow: [
       {
         key: "sent",
         name: "Sent",
-        renderLabel: (value) => compaсtNumberFormatter.format(value),
+        renderLabel: (value: any) => compaсtNumberFormatter.format(value),
       },
       {
         key: "delivered",
         name: "Delivered",
-        renderLabel: (value) => compaсtNumberFormatter.format(value),
+        renderLabel: (value: any) => compaсtNumberFormatter.format(value),
       },
       {
         key: "openedPercentage",
         name: "Opened",
-        renderLabel: (value) => `${compaсtNumberFormatter.format(value)}%`,
+        renderLabel: (value: any) => `${compaсtNumberFormatter.format(value)}%`,
       },
       {
         key: "clickedPercentage",
         name: "Clicked",
-        renderLabel: (value) => `${compaсtNumberFormatter.format(value)}%`,
+        renderLabel: (value: any) => `${compaсtNumberFormatter.format(value)}%`,
       },
     ],
   },
@@ -64,17 +53,17 @@ export const messageFixtures: Record<
       {
         key: "sent",
         name: "Sent",
-        renderLabel: (value) => compaсtNumberFormatter.format(value),
+        renderLabel: (value: any) => compaсtNumberFormatter.format(value),
       },
       {
         key: "delivered",
         name: "Delivered",
-        renderLabel: (value) => compaсtNumberFormatter.format(value),
+        renderLabel: (value: any) => compaсtNumberFormatter.format(value),
       },
       {
         key: "openedPercentage",
         name: "Opened",
-        renderLabel: (value) => `${compaсtNumberFormatter.format(value)}%`,
+        renderLabel: (value: any) => `${compaсtNumberFormatter.format(value)}%`,
       },
     ],
   },
@@ -84,17 +73,17 @@ export const messageFixtures: Record<
   },
   [MessageType.SMS]: {
     icon: <SMSIcon />,
-    text: "SMS",
+    text: "Validar",
     statsToShow: [
       {
         key: "sent",
         name: "Sent",
-        renderLabel: (value) => compaсtNumberFormatter.format(value),
+        renderLabel: (value: any) => compaсtNumberFormatter.format(value),
       },
       {
         key: "delivered",
         name: "Delivered",
-        renderLabel: (value) => compaсtNumberFormatter.format(value),
+        renderLabel: (value: any) => compaсtNumberFormatter.format(value),
       },
     ],
   },
@@ -105,12 +94,12 @@ export const messageFixtures: Record<
       {
         key: "wssent",
         name: "Sent",
-        renderLabel: (value) => compaсtNumberFormatter.format(value),
+        renderLabel: (value: any) => compaсtNumberFormatter.format(value),
       },
       {
         key: "failed",
         name: "Failed",
-        renderLabel: (value) => `${compaсtNumberFormatter.format(value)}%`,
+        renderLabel: (value: any) => `${compaсtNumberFormatter.format(value)}%`,
       },
     ],
   },
@@ -121,12 +110,12 @@ const unknownMessageFixtures: { icon: ReactNode; text: string } = {
   text: "Unknown message type",
 };
 
-export const MessageNode: FC<NodeProps<MessageNodeData>> = ({
+export const MessageNode: any = ({
   isConnectable,
   data,
   selected,
   id,
-}) => {
+}: any) => {
   const { isViewMode } = useAppSelector((state) => state.flowBuilder);
 
   const { template, stats, disabled } = data;
@@ -193,10 +182,10 @@ export const MessageNode: FC<NodeProps<MessageNodeData>> = ({
               <span className="#4B5563">Send </span>
               <span className="font-medium">{template.selected.name}</span>
             </>
-          ) : (
-            <span className={data.showErrors ? "text-[#F43F5E]" : ""}>
-              Select a template
-            </span>
+          ) : (""
+            // <span className={data.showErrors ? "text-[#F43F5E]" : ""}>
+            //   Select a template
+            // </span>
           )}
         </div>
       </div>

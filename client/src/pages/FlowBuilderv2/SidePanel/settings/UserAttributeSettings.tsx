@@ -17,6 +17,8 @@ const UserAttributeSettings: FC<
   const { branches } = nodeData;
 
   const handleAddAttributeBranch = () => {
+    console.log("teste")
+
     const newBranch: AttributeBranch = {
       id: uuid(),
       type: BranchType.ATTRIBUTE,

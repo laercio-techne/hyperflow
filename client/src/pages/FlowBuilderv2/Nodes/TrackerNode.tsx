@@ -68,12 +68,12 @@ export const findFirstTrackerAbove = (
   return undefined;
 };
 
-export const TrackerNode: FC<NodeProps<TrackerNodeData>> = ({
+export const TrackerNode: any = ({
   isConnectable,
   data: { stats, needsCheck, tracker, showErrors, disabled },
   selected,
   id,
-}) => {
+}: any) => {
   const { nodes, edges, isViewMode } = useAppSelector(
     (state: any) => state.flowBuilder
   );
@@ -159,7 +159,7 @@ export const TrackerNode: FC<NodeProps<TrackerNodeData>> = ({
           <div
             className={`font-inter font-semibold text-base flex justify-between items-center w-full`}
           >
-            <div className="whitespace-nowrap">Component</div>
+            <div className="whitespace-nowrap">Registrar Solicitacao</div>
             {tracker && (
               <div
                 className="flex items-center gap-[6px]"
@@ -234,10 +234,10 @@ export const TrackerNode: FC<NodeProps<TrackerNodeData>> = ({
             <div className="w-fit px-[5px] bg-[#E0E7FF] text-[#4338CA] rounded">
               {tracker.trackerId}
             </div>
-          ) : (
-            <span className={showErrors ? "text-[#F43F5E]" : ""}>
-              Set a tracker
-            </span>
+          ) : (""
+            // <span className={showErrors ? "text-[#F43F5E]" : ""}>
+            //   Set a tracker
+            // </span>
           )}
         </div>
       </div>

@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import ApiService from "services/api.service";
-import emptyDataImage from "pages/JourneyTablev2/svg/empty-data.svg";
+import emptyDataImage from "assets/svg/empty-data.svg";
 
 interface Journey {
   id: string;

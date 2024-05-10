@@ -102,9 +102,9 @@ const ExperimentNodeSettings: FC<
                       value={`${String((el.ratio * 100).toFixed(0))}`}
                       onChange={(str) => handleChangePercent(i, +str)}
                     />
-                    <span className="text-[#111827] text-[14px] font-inter font-semibold ml-1">
+                    {/* <span className="text-[#111827] text-[14px] font-inter font-semibold ml-1">
                       %
-                    </span>
+                    </span> */}
                   </div>
                   {nodeData.branches.length > 2 && (
                     <Button

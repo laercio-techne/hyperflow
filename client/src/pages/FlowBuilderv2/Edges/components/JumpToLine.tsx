@@ -201,7 +201,7 @@ const JumpToLine: any = ({
         >
           <div
             ref={sourceRef}
-            className="relative rounded-[100%] w-[10px] h-[10px] -translate-y-2/3"
+            // className="relative rounded-[100%] w-[10px] h-[10px] -translate-y-2/3"
             style={{
               background: currentColor,
             }}
@@ -214,30 +214,30 @@ const JumpToLine: any = ({
                       <defs>
                         <marker
                           id={`arrowhead${markerUUID}`}
-                          markerWidth="20"
-                          markerHeight="14"
-                          refX={targetId ? "3.5" : "0"}
-                          refY="3.5"
+                          //markerWidth="20"
+                          //markerHeight="14"
+                          //refX={targetId ? "3.5" : "0"}
+                          //refY="3.5"
                           orient="auto"
-                          markerUnits="strokeWidth"
+                         // markerUnits="strokeWidth"
                         >
-                          <path
+                          {/* <path
                             d="M 3.5 3.5 L 0 7 L 3.5 3.5 L 0 0 Z"
                             style={{
                               stroke: currentColor,
                               fill: currentColor,
                             }}
-                          />
+                          /> */}
                         </marker>
                       </defs>
                       <path
                         className="react-flow__edge-path"
                         style={{
-                          strokeWidth: 3,
+                          strokeWidth: 1,
                           stroke: currentColor,
                           outline: "none",
-                          strokeDasharray: "4 4",
-                          strokeLinecap: "round",
+                          // strokeDasharray: "4 4",
+                          // strokeLinecap: "round",
                           animation: "dash 1s linear infinite",
                         }}
                         d={edgePath}

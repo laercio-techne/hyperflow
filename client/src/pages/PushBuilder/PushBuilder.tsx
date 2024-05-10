@@ -155,12 +155,7 @@ const PushBuilder = ({ isInlineCreator }: PushBuilderProps) => {
         isInlineCreator={isInlineCreator}
         handleBackToJourney={handleBackToJourney}
       />
-      {templateInlineCreation && !templateInlineCreation.templateId ? (
-        <TemplateInlineEditor
-          type={templateInlineCreation.type}
-          onTemplateCreated={handleInlineCreatedTemplate}
-        />
-      ) : pageIndex === 0 ? (
+      {pageIndex === 0 ? (
         <PushBuilderContent
           data={pushBuilderData}
           onChange={setPushBuilderData}
