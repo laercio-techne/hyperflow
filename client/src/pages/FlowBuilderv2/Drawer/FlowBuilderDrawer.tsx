@@ -1,4 +1,3 @@
-import { OnboardingAction } from "pages/Onboardingv2/OnboardingSandbox";
 import { DragEvent, FC } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import {
@@ -12,7 +11,7 @@ import defaultFixtures, { DrawerAction } from "./drawer.fixtures";
 export interface FlowBuilderDrawerFixture {
   groupName: string;
   children: {
-    id: DrawerAction | OnboardingAction;
+    id: DrawerAction;
     icon: JSX.Element;
     text: string;
     disabled?: boolean;
@@ -30,7 +29,7 @@ const FlowBuilderDrawer: any = ({ fixtures }: any) => {
 
   const onDragStart = (
     e: DragEvent<HTMLDivElement>,
-    action: DrawerAction | OnboardingAction,
+    action: DrawerAction,
     targetId?: string
   ) => {
     e.dataTransfer.setData("action", action);
